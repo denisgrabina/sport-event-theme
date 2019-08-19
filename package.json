@@ -1,0 +1,24 @@
+{
+  "name": "sport-event-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme for generating One Page Langings on Sport Events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisgrabina/sport-event-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denisgrabina/sport-event-theme/issues"
+  },
+  "homepage": "https://github.com/denisgrabina/sport-event-theme#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
