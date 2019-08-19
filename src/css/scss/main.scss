@@ -3,4 +3,10 @@
 @import "./base/test";
 
 // templates
-@import "./sport-event/sport-event"
+@import "./sport-event/sport-event";
+
+body {
+	color: green;
+	font-size: 12px;
+	border: 1px solid;
+}

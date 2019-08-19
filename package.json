@@ -19,6 +19,9 @@
   "homepage": "https://github.com/denisgrabina/sport-event-theme#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "node-sass": "^4.12.0"
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
   }
 }
