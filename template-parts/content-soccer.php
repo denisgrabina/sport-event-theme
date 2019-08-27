@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying a message that posts cannot be found
  *
@@ -23,13 +24,13 @@
 
 			<div class="team-flag">
 				<div>
-					<img src="img/bor.png" alt="Флаг левой команды" class="img-responsive team-name-left" />
+					<img src="<?php echo get_template_directory_uri() . '/src/img/bor.png'?>" alt="Флаг левой команды" class="img-responsive team-name-left" />
 				</div>
 				<div>
 					<div class="vs">vs</div>
 				</div>
 				<div>
-					<img src="img/bav.png" alt="Флаг правой команды" class="img-responsive team-name-right" />
+					<img src="<?php echo get_template_directory_uri() . '/src/img/bav.png'?>" alt="Флаг правой команды" class="img-responsive team-name-right" />
 				</div>
 			</div>
 
@@ -46,16 +47,16 @@
 
 			<div class="cta-button">
 				<a href="https://bookmakers.bazabet.com.ua/" target="_blank">Сделать ставку
-					<svg>
+					<!-- <svg>
 						<polyline class="o1" points="2 2, 368 2, 368 77, 2 77, 2 2"></polyline>
-					</svg>
+					</svg> -->
 				</a>
 			</div>
 		</div>
 
 		<div class="player-container">
-			<img src="img/player-left.png" alt="player-left" class="img-responsive player player-left" />
-			<img src="img/player-right.png" alt="player-right" class="img-responsive player player-right" />
+			<img src="<?php echo get_template_directory_uri() . '/src/img/player-left.png'?>" alt="player-left" class="img-responsive player player-left" />
+			<img src="<?php echo get_template_directory_uri() . '/src/img/player-right.png'?>" alt="player-right" class="img-responsive player player-right" />
 		</div>
 	</div>
 </main>

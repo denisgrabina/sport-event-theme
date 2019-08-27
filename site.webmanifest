@@ -1,0 +1,12 @@
+{
+  "short_name": "template-landing",
+  "name": "Template Landing Pages",
+  "icons": [{
+    "src": "img/defaults/icon.png",
+    "type": "img/defaults/image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}

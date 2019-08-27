@@ -4,7 +4,8 @@
   "description": "Wordpress theme for generating One Page Langings on Sport Events",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,19 @@
     "url": "https://github.com/denisgrabina/sport-event-theme/issues"
   },
   "homepage": "https://github.com/denisgrabina/sport-event-theme#readme",
+  "browserslist": [
+    "> 2%",
+    "ie >= 10"
+  ],
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0"
   }
 }

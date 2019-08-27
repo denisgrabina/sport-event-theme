@@ -20,3 +20,9 @@ function translatePlayerElement(e) {
     }
   }
 }
+console.log('teeest123');
+
+
+
+
+

@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * Template name: Event
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,7 +18,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<h1>Home Page</h1>
+		<?php get_template_part('template-parts/content', 'soccer')?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
