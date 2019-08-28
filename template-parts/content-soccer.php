@@ -12,7 +12,7 @@
 
 <main class="main">
 	<header class="header">
-		<h1>Bazabet</h1>
+		<h1><?php the_field('event-football-bg'); ?></h1>
 		<h2>База ставок на спорт</h2>
 	</header>
 	<div class="event-data">

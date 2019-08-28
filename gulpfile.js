@@ -6,29 +6,32 @@ const rename = require('gulp-rename');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
-const clean = require('gulp-clean');
+const del = require('del');
 const paths = {
 	clean: {
-		src: './build'
+		src: './dist'
 	},
   styles: {
     src: './src/scss/**/*.scss',
-    dest: './build/css'
+    dest: './dist/css'
   },
   scripts: {
     src: ['./src/js/vendor/*.js', './src/js/**/*.js'],
-    dest: './build/js'
+    dest: './dist/js'
   },
   images: {
     src: './src/img/**',
-    dest: './build/img'
-  }
+    dest: './dist/img'
+  },
+	fonts: {
+		src: './src/fonts/**',
+		dest: './dist/fonts'
+	}
 }
 
-function cleanBuild(cb) {
-	src(paths.clean.src)
-		.pipe(clean())
-	
+function cleanDist(cb) {
+	del.sync(paths.clean.src);
+
 	cb();
 }
 
@@ -71,6 +74,12 @@ function images(cb) {
 		cb();
 }
 
+function fonts(cb) {
+	src(paths.fonts.src).pipe(dest(paths.fonts.dest));
+
+	cb();
+}
+
 function watchFiles(cb) {
   watch(paths.styles.src, series(styles));
   watch(paths.scripts.src, series(scripts));
@@ -79,15 +88,18 @@ function watchFiles(cb) {
 	cb();
 }
 
-const build = series(cleanBuild, parallel(
-	styles, 
-	scripts, 
-	images
-), watchFiles);
+const dist = series(cleanDist, parallel(
+	styles,
+	scripts,
+	images,
+	fonts,
+	watchFiles
+));
 
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
+exports.fonts = fonts;
 exports.watchFiles = watch;
-exports.cleanBuild = cleanBuild;
-exports.default = build;
+exports.cleanDist = cleanDist;
+exports.default = dist;

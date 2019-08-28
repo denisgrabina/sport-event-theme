@@ -9,17 +9,17 @@
 /* Fonts */
 @font-face {
   font-family: "Bazabet";
-  src: url("../fonts/Bazabet.woff") format("woff");
+  src: 
+		url("../fonts/Bazabet/Bazabet-Regular.woff") format("woff"),
+		url("../fonts/Bazabet/Bazabet-Regular.eot") format("eot"),
+		url("../fonts/Bazabet/Bazabet-Regular.ttf") format("ttf"),
+		url("../fonts/Bazabet/Bazabet-Regular.otf") format("otf");
 }
 
 @font-face {
   font-family: "Formular-Regular";
-  src: url("../fonts/Formular-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Bazabet-Bold";
-  src: url("../fonts/Bazabet-Bold.woff") format("woff");
+  src: url("../fonts/Formular/Formular-Medium.woff") format("woff"),
+   		 url("../fonts/Formular/Formular-Medium.woff2") format("woff2");
 }
 
 body {
