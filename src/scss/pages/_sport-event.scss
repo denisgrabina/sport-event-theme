@@ -19,9 +19,9 @@
   }
 
   .main {
-		padding-top: 135px;
-		background-repeat: no-repeat;
-		background-position: center top;
+    padding-top: 135px;
+    background-repeat: no-repeat;
+    background-position: center top;
     position: relative;
     min-height: 1176px;
   }
@@ -230,11 +230,11 @@
 /* ========= Media Queries =========  */
 
 @media (min-width: 1920px) {
-	.page-template-event {
-		.main {
-			background-size: cover;
-		}
-	}
+  .page-template-event {
+    .main {
+      background-size: cover;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -470,6 +470,55 @@
       flex-direction: column;
       justify-content: space-evenly;
       height: 70vh;
+    }
+  }
+}
+
+/**  Specific Styles  */
+.home {
+  &.page-template-event {
+    .main {
+      height: 100vh;
+    }
+    .team-flag,
+    .coef,
+		.footer {
+      display: none;
+    }
+		.cta-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%);
+			width: 100%;
+		}
+  }
+}
+
+@media (max-height: 420px) {
+  .home {
+    &.page-template-event {
+      .main {
+				padding-top: 20px;
+			}
+    }
+  }
+}
+
+@media (min-height: 375px) {
+  .home {
+    &.page-template-event {
+      overflow: hidden;      
+    }
+  }
+}
+
+@media (width: 812px) and (height: 375px) {
+  .home {
+    &.page-template-event {
+      .cta-button {
+			top: 0;
+		}   
     }
   }
 }

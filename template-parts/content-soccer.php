@@ -24,13 +24,13 @@
 
 			<div class="team-flag">
 				<div>
-					<img src="<?php the_field('team-flag-left'); ?>" alt="Флаг левой команды" class="img-responsive team-name-left" />
+					<img src="<?php the_field('team-flag-left'); ?>" class="img-responsive team-name-left" />
 				</div>
 				<div>
 					<div class="vs"><?php the_field('versus-text'); ?></div>
 				</div>
 				<div>
-					<img src="<?php the_field('team-flag-right'); ?>" alt="Флаг правой команды" class="img-responsive team-name-right" />
+					<img src="<?php the_field('team-flag-right'); ?>" class="img-responsive team-name-right" />
 				</div>
 			</div>
 
@@ -55,8 +55,8 @@
 		</div>
 
 		<div class="player-container">
-			<img src="<?php the_field('player-left'); ?>" alt="<?php the_field('player-left') ?>" class="img-responsive player player-left" />
-			<img src="<?php the_field('player-right'); ?>" alt="<?php the_field('player-left') ?>" class="img-responsive player player-right" />
+			<img src="<?php the_field('player-left'); ?>" class="img-responsive player player-left" />
+			<img src="<?php the_field('player-right'); ?>" class="img-responsive player player-right" />
 		</div>
 	</div>
 </main>
