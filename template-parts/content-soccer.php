@@ -10,43 +10,43 @@
 
 ?>
 
-<main class="main">
+<main class="main" style="background-image: url(<?php the_field('event-football-bg') ?>);">
 	<header class="header">
-		<h1><?php the_field('event-football-bg'); ?></h1>
-		<h2>База ставок на спорт</h2>
+		<h1><?php the_field('title'); ?></h1>
+		<h2><?php the_field('subtitle'); ?></h2>
 	</header>
 	<div class="event-data">
 		<div class="container">
 			<div class="team-name">
-				<div class="team-name-left">Боруссия Д.</div>
-				<div class="team-name-right">Бавария</div>
+				<div class="team-name-left"><?php the_field('team-name-left'); ?></div>
+				<div class="team-name-right"><?php the_field('team-name-right'); ?></div>
 			</div>
 
 			<div class="team-flag">
 				<div>
-					<img src="<?php echo get_template_directory_uri() . '/src/img/bor.png'?>" alt="Флаг левой команды" class="img-responsive team-name-left" />
+					<img src="<?php the_field('team-flag-left'); ?>" alt="Флаг левой команды" class="img-responsive team-name-left" />
 				</div>
 				<div>
-					<div class="vs">vs</div>
+					<div class="vs"><?php the_field('versus-text'); ?></div>
 				</div>
 				<div>
-					<img src="<?php echo get_template_directory_uri() . '/src/img/bav.png'?>" alt="Флаг правой команды" class="img-responsive team-name-right" />
+					<img src="<?php the_field('team-flag-right'); ?>" alt="Флаг правой команды" class="img-responsive team-name-right" />
 				</div>
 			</div>
 
 			<div class="coef">
-				<div class="w1">3.1</div>
-				<div class="x">3.5</div>
-				<div class="w2">2.0</div>
+				<div class="w1"><?php the_field('w1'); ?></div>
+				<div class="x"><?php the_field('x'); ?></div>
+				<div class="w2"><?php the_field('w2'); ?></div>
 			</div>
 
 			<div class="date">
-				<div class="day">3 августа</div>
-				<div class="time">21:30</div>
+				<div class="day"><?php the_field('day'); ?></div>
+				<div class="time"><?php the_field('time'); ?></div>
 			</div>
 
 			<div class="cta-button">
-				<a href="https://bookmakers.bazabet.com.ua/" target="_blank">Сделать ставку
+				<a href="<?php the_field('cta-link'); ?>" target="_blank"><?php the_field('cta-link-text'); ?>
 					<!-- <svg>
 						<polyline class="o1" points="2 2, 368 2, 368 77, 2 77, 2 2"></polyline>
 					</svg> -->
@@ -55,25 +55,21 @@
 		</div>
 
 		<div class="player-container">
-			<img src="<?php echo get_template_directory_uri() . '/src/img/player-left.png'?>" alt="player-left" class="img-responsive player player-left" />
-			<img src="<?php echo get_template_directory_uri() . '/src/img/player-right.png'?>" alt="player-right" class="img-responsive player player-right" />
+			<img src="<?php the_field('player-left'); ?>" alt="<?php the_field('player-left') ?>" class="img-responsive player player-left" />
+			<img src="<?php the_field('player-right'); ?>" alt="<?php the_field('player-left') ?>" class="img-responsive player player-right" />
 		</div>
 	</div>
 </main>
 
 <footer class="footer">
 	<div class="steps">
-		<div class="step">
-			<div class="step-number">1</div>
-			<div class="step-text">регистрируйся</div>
-		</div>
-		<div class="step">
-			<div class="step-number">2</div>
-			<div class="step-text">пополняй счет</div>
-		</div>
-		<div class="step">
-			<div class="step-number">3</div>
-			<div class="step-text">ставь без риска</div>
-		</div>
+			<?php while (have_rows('steps')) : the_row(); ?>
+				<div class="step">
+				<div class="step-number"><?php the_sub_field('step-num'); ?></div>
+				<div class="step-text"><?php the_sub_field('step-text'); ?></div>
+			</div>
+			<?php
+			endwhile;
+		?>
 	</div>
 </footer>
