@@ -100,13 +100,22 @@
 
   .date {
     margin-top: 75px;
-    font-size: 43px;
+    font-size: 26px;
   }
 
   .day {
     font-family: "Formular-bold", sans-serif;
     text-transform: uppercase;
   }
+
+	.slogan {
+		text-transform: uppercase;
+    font-size: 36px;
+    transform: translateY(70px);
+    font-family: bazabet;
+    max-width: 900px;
+    margin: 0 auto;
+	}
 
   .cta-button {
     margin-top: 100px;
@@ -237,12 +246,40 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .page-template-event {
+    .slogan {
+			transform: translateY(20px);
+		}
+  }
+}
+
+@media (max-width: 1400px) {
+  .page-template-event {
+    .slogan {
+			font-size: 30px;
+		}
+  }
+}
+
+@media (max-width: 1270px) {
+  .page-template-event {
+    .slogan {
+			font-size: 24px
+		}
+  }
+}
+
 @media (max-width: 992px) {
   .page-template-event {
     .player {
       max-width: 275px;
       max-height: 350px;
     }
+		.slogan {
+			font-size: 24px;
+			max-width: 320px;
+		}
   }
 }
 
@@ -281,6 +318,11 @@
       max-width: 200px;
       max-height: 250px;
     }
+		.slogan {
+			transform: translateY(20px);
+			font-size: 18px;
+			max-width: 320px;
+		}
     .coef {
       font-size: 22px;
     }
@@ -354,6 +396,14 @@
       font-size: 12px;
       padding: 5spx 4px;
     }
+		.date {
+			font-size: 12px;
+		}
+		.slogan {
+			transform: translateY(10px);
+			font-size: 14px;
+			max-width: 120px;
+		}
   }
 }
 
@@ -378,6 +428,9 @@
     .team-name {
       margin-top: 25px;
     }
+		.slogan {
+			transform: translateY(20px);
+		}
     .cta-button {
       margin-top: 50px;
       transform: translate(0, 0);
