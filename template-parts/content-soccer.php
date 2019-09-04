@@ -45,6 +45,10 @@
 				<div class="time"><?php the_field('time'); ?></div>
 			</div>
 
+			<div class="slogan">
+				<?php the_field('slogan'); ?>
+			</div>
+
 			<div class="cta-button">
 				<a href="<?php the_field('cta-link'); ?>" target="_blank"><?php the_field('cta-link-text'); ?>
 					<!-- <svg>
