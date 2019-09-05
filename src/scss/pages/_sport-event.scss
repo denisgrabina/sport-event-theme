@@ -120,14 +120,13 @@
   .slogan {
     text-transform: uppercase;
     font-size: 36px;
-    transform: translateY(70px);
-    font-family: bazabet;
+    transform: translateY(40px);
+    font-family: 'Formular-Regular', sans-serif;
     max-width: 900px;
     margin: 0 auto;
   }
 
   .cta-button {
-    margin-top: 100px;
     transform: translate(0, 100px);
     padding: 20px 30px;
   }
@@ -179,7 +178,7 @@
     height: 100%;
     display: block;
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -255,14 +254,6 @@
   }
 }
 
-@media (max-width: 1600px) {
-  .page-template-event {
-    .slogan {
-      transform: translateY(20px);
-    }
-  }
-}
-
 @media (max-width: 1400px) {
   .page-template-event {
     .slogan {
@@ -279,12 +270,17 @@
   }
 }
 
-@media (max-width: 992px) {
-  .page-template-event {
-    .player {
+@media (max-width: 1080px) {
+	.page-template-event {
+  	.player {
       max-width: 275px;
       max-height: 350px;
     }
+	}
+}
+
+@media (max-width: 992px) {
+  .page-template-event {
     .slogan {
       font-size: 24px;
       max-width: 320px;
@@ -330,6 +326,9 @@
       transform: translateY(20px);
       font-size: 18px;
       max-width: 320px;
+			transform: translateY(10px);
+			font-size: 14px;
+			max-width: 120px;
     }
     .coef {
       font-size: 22px;
