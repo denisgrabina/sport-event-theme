@@ -7,12 +7,10 @@
 	<meta name="description" content="Temlate Landing Page Generator for Sport Events Bazabet" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="manifest" href="<?php echo get_template_directory_uri() . '/site.webmanifest'?>"/>
+	<link rel="manifest" href="<?php echo get_template_directory_uri() . '/site.webmanifest' ?>" />
 	<!-- <link rel="apple-touch-icon" href="../img/defaults/icon.png" /> -->
 
 	<meta name="theme-color" content="#25303B" />
-
-	<?php wp_head(); ?>
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
@@ -28,14 +26,17 @@
 			j.src =
 				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-MS78SB7');
+		})(window, document, 'script', 'dataLayer', 'GTM-WKDJP9K');
 	</script>
 	<!-- End Google Tag Manager -->
+
+	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class($class); ?>>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS78SB7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKDJP9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 	<!--[if IE]>
