@@ -34,10 +34,14 @@
     position: relative;
     padding: 0 30px;
 
-		.container {
-			display: flex;
-			flex-direction: column;
-		}
+    .container {
+      display: flex;
+      flex-direction: column;
+      @include orderFlexContainerChildren(1, 6);
+			>div:nth-child(5) {
+				order: 0;
+			}
+    }
   }
 
   .container {
@@ -113,14 +117,14 @@
     text-transform: uppercase;
   }
 
-	.slogan {
-		text-transform: uppercase;
+  .slogan {
+    text-transform: uppercase;
     font-size: 36px;
     transform: translateY(70px);
     font-family: bazabet;
     max-width: 900px;
     margin: 0 auto;
-	}
+  }
 
   .cta-button {
     margin-top: 100px;
@@ -254,24 +258,24 @@
 @media (max-width: 1600px) {
   .page-template-event {
     .slogan {
-			transform: translateY(20px);
-		}
+      transform: translateY(20px);
+    }
   }
 }
 
 @media (max-width: 1400px) {
   .page-template-event {
     .slogan {
-			font-size: 30px;
-		}
+      font-size: 30px;
+    }
   }
 }
 
 @media (max-width: 1270px) {
   .page-template-event {
     .slogan {
-			font-size: 24px
-		}
+      font-size: 24px;
+    }
   }
 }
 
@@ -281,10 +285,10 @@
       max-width: 275px;
       max-height: 350px;
     }
-		.slogan {
-			font-size: 24px;
-			max-width: 320px;
-		}
+    .slogan {
+      font-size: 24px;
+      max-width: 320px;
+    }
   }
 }
 
@@ -322,11 +326,11 @@
     .player {
       display: none;
     }
-		.slogan {
-			transform: translateY(20px);
-			font-size: 18px;
-			max-width: 320px;
-		}
+    .slogan {
+      transform: translateY(20px);
+      font-size: 18px;
+      max-width: 320px;
+    }
     .coef {
       font-size: 22px;
     }
@@ -400,14 +404,14 @@
       font-size: 12px;
       padding: 5spx 4px;
     }
-		.date {
-			font-size: 12px;
-		}
-		.slogan {
-			transform: translateY(10px);
-			font-size: 14px;
-			max-width: 120px;
-		}
+    .date {
+      font-size: 12px;
+    }
+    .slogan {
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
+    }
   }
 }
 
@@ -432,9 +436,9 @@
     .team-name {
       margin-top: 25px;
     }
-		.slogan {
-			transform: translateY(20px);
-		}
+    .slogan {
+      transform: translateY(20px);
+    }
     .cta-button {
       margin-top: 50px;
       transform: translate(0, 0);
@@ -539,16 +543,16 @@
     }
     .team-flag,
     .coef,
-		.footer {
+    .footer {
       display: none;
     }
-		.cta-button {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%);
-			width: 100%;
-		}
+    .cta-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+    }
   }
 }
 
@@ -556,8 +560,8 @@
   .home {
     &.page-template-event {
       .main {
-				padding-top: 20px;
-			}
+        padding-top: 20px;
+      }
     }
   }
 }
@@ -565,7 +569,7 @@
 @media (min-height: 375px) {
   .home {
     &.page-template-event {
-      overflow: hidden;      
+      overflow: hidden;
     }
   }
 }
@@ -574,8 +578,8 @@
   .home {
     &.page-template-event {
       .cta-button {
-			top: 0;
-		}   
+        top: 0;
+      }
     }
   }
 }
