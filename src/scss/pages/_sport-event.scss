@@ -33,6 +33,11 @@
     max-width: 1600px;
     position: relative;
     padding: 0 30px;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
   }
 
   .container {
@@ -315,8 +320,7 @@
       padding: 18px 12px 24px;
     }
     .player {
-      max-width: 200px;
-      max-height: 250px;
+      display: none;
     }
 		.slogan {
 			transform: translateY(20px);
