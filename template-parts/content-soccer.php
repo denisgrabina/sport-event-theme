@@ -50,7 +50,7 @@
 			</div>
 
 			<div class="cta-button">
-				<a href="<?php the_field('cta-link'); ?>" target="_blank"><?php the_field('cta-link-text'); ?>
+				<a href="<?php the_field('cta-link'); ?>" class="cta-link"><?php the_field('cta-link-text'); ?>
 					<!-- <svg>
 						<polyline class="o1" points="2 2, 368 2, 368 77, 2 77, 2 2"></polyline>
 					</svg> -->
