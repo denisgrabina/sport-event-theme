@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Temlate Landing Page Generator for Sport Events Bazabet</title>
+	<title>Template Landing Page Generator for Sport Events Bazabet</title>
 	<meta name="description" content="Temlate Landing Page Generator for Sport Events Bazabet" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
