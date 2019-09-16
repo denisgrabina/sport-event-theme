@@ -1,0 +1,28 @@
+.cta-button {
+  a {
+		min-width: 378px;
+    font-family: $formularMedium;
+    font-size: 33px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    background-color: $greenColor;
+    cursor: pointer;
+    box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.3);
+    transition: 0.5s;
+    position: relative;
+		letter-spacing: 2px;
+    &:hover {
+      background-color: #009d39;
+      box-shadow: none;
+      cursor: pointer;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}
