@@ -2,9 +2,9 @@
   background-color: #000;
 
   h1 {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 73px;
-    color: #00b140;
+    color: $greenColor;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1;
@@ -53,7 +53,7 @@
   }
 
   .team-name {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     display: flex;
     justify-content: center;
     font-size: 40px;
@@ -96,7 +96,7 @@
   .coef {
     display: flex;
     justify-content: center;
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 40px;
   }
 
@@ -122,42 +122,14 @@
     text-transform: uppercase;
     font-size: 36px;
     transform: translateY(40px);
-    font-family: 'Formular-Regular', sans-serif;
+    font-family: $formularMedium;
     max-width: 900px;
     margin: 0 auto;
   }
 
-  .cta-button {
-    transform: translate(0, 100px);
-    padding: 20px 30px;
-  }
-
-  .cta-button a {
-    font-family: "Formular-bold", sans-serif;
-    font-size: 33px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    background-color: #00b140;
-    cursor: pointer;
-    box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.6);
-    transition: 0.5s;
-    position: relative;
-  }
-
-  .cta-button a:hover {
-    background-color: #003f16;
-    box-shadow: none;
-    cursor: pointer;
-  }
-
-  .cta-button a:hover,
-  .cta-button a:active,
-  .cta-button a:focus {
-    outline: none;
-    border: none;
-  }
+	.cta-button {
+		transform: translate(0,100px);
+	}
 
   .cta-button a svg {
     width: 100%;
@@ -168,7 +140,7 @@
   }
 
   .cta-button a svg .o1 {
-    stroke: #00b140;
+    stroke: $greenColor;
     stroke-width: 3;
     transition: all 0.4s linear;
     fill: transparent;
@@ -225,15 +197,15 @@
   }
 
   .step-number {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 73px;
-    color: #00b140;
+    color: $greenColor;
   }
 
   .step-text {
-    font-family: "Formular-bold", sans-serif;
+    font-family: $formularBold;
     padding-bottom: 15px;
-    border-bottom: 1px solid #00b140;
+    border-bottom: 1px solid $greenColor;
     font-size: 18px;
     text-transform: uppercase;
     margin-left: 15px;
@@ -420,7 +392,7 @@
   .page-template-event {
     .cta-button a {
       font-size: 18px;
-      padding: 5spx 4px;
+      padding: 5px 4px;
     }
   }
 }
