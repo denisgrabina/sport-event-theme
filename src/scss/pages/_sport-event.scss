@@ -38,9 +38,9 @@
       display: flex;
       flex-direction: column;
       @include orderFlexContainerChildren(1, 6);
-			>div:nth-child(5) {
-				order: 0;
-			}
+      > div:nth-child(5) {
+        order: 0;
+      }
     }
   }
 
@@ -79,7 +79,7 @@
   .team-flag img {
     max-width: 140px;
     height: 140px;
-		border-radius: 51%;
+    border-radius: 51%;
   }
 
   .vs {
@@ -127,9 +127,9 @@
     margin: 0 auto;
   }
 
-	.cta-button {
-		transform: translate(0,100px);
-	}
+  .cta-button {
+    transform: translate(0, 100px);
+  }
 
   .cta-button a svg {
     width: 100%;
@@ -178,6 +178,35 @@
 
   .player-right {
     right: 5%;
+  }
+
+  .cta-button {
+    a {
+      min-width: 378px;
+      font-family: $formularMedium;
+      font-size: 33px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 15px 40px;
+      background-color: $greenColor;
+      cursor: pointer;
+      box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.3);
+      transition: 0.5s;
+      position: relative;
+      letter-spacing: 2px;
+      &:hover {
+        background-color: #009d39;
+        box-shadow: none;
+        cursor: pointer;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
   }
 
   .footer {
@@ -244,12 +273,12 @@
 }
 
 @media (max-width: 1080px) {
-	.page-template-event {
-  	.player {
+  .page-template-event {
+    .player {
       max-width: 275px;
       max-height: 350px;
     }
-	}
+  }
 }
 
 @media (max-width: 992px) {
@@ -299,9 +328,9 @@
       transform: translateY(20px);
       font-size: 18px;
       max-width: 320px;
-			transform: translateY(10px);
-			font-size: 14px;
-			max-width: 120px;
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
     }
     .coef {
       font-size: 22px;
