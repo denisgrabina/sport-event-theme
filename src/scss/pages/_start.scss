@@ -1,3 +1,7 @@
+html {
+  font-size: 8px;
+}
+
 .page-template-start {
   user-select: none;
   background-color: #414b57;
@@ -12,14 +16,12 @@
   .main {
     background-size: 75px;
     background-repeat: repeat;
-    min-height: 100%;
   }
 
   .stad-bg {
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-y: 100%;
-    min-height: 100%;
+    background-size: 150%;
+    background-position: 50% 50%;
   }
 
   .container {
@@ -29,111 +31,251 @@
     padding-right: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
   }
 
   h1 {
     font-family: $bazabetFont;
-    font-size: 73px;
     color: $greenColor;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-top: 80px;
-  }
-
-  .benefits {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 96px;
-    .benefit {
-      display: flex;
-      text-align: left;
-			align-items: center;
-      &-icon {
-        width: 35px;
-        height: 35px;
-        margin-right: 3%;
-      }
-      &-text {
-        text-transform: uppercase;
-        max-width: 242px;
-      }
-    }
+    margin: 2.5rem auto 0;
+    font-size: 5.0625rem;
+    flex-basis: 10%;
+    order: 1;
   }
 
   h2 {
     font-family: $formularLight;
-    font-size: 100px;
-    margin-top: 100px;
-    letter-spacing: 32px;
-    margin-left: 42px;
-    font-size: 64px;
+    letter-spacing: 2rem;
+    margin-left: 2.625rem;
+    font-size: 4rem;
+    order: 2;
+    flex-basis: 5%;
   }
+
   h3 {
     font-family: $bazabetFont;
-    font-size: 120px;
-    text-shadow: 0 -5px 80px $greenColor, 5px 0 80px $greenColor,
-      0 10px 5px black, -5px 0 80px $greenColor;
+    font-size: 6.25rem;
+    text-shadow: 0 -0.3125rem 5rem $greenColor, 0.3125rem 0 5rem $greenColor,
+      0 10px 0.3125rem black, -0.3125rem 0 5rem $greenColor;
+    order: 3;
+    flex-basis: 44%;
   }
-  img.players {
-    max-width: 670px;
-    height: 820px;
-    margin: 95px auto 0;
+
+  .benefits {
+    display: none;
   }
+
+  .cta-button {
+    order: 4;
+    flex-basis: 15%;
+    a {
+      font-family: $formularMedium;
+      font-size: 2.0625rem;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.9375rem 2.5rem;
+      background-color: $greenColor;
+      cursor: pointer;
+      box-shadow: 0.5rem 0.5rem 0 rgba(0, 31, 11, 0.3);
+      transition: 0.5s;
+      position: relative;
+      letter-spacing: 0.125rem;
+      &:hover {
+        background-color: #009d39;
+        box-shadow: none;
+        cursor: pointer;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
   .steps {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    flex-direction: column;
+    margin: 0 auto;
+    order: 6;
+    text-align: left;
     .step {
       display: flex;
       align-items: center;
       &-number {
         font-family: $bazabetFont;
-        font-size: 73px;
+        font-size: 3rem;
         color: $greenColor;
       }
       &-text {
         font-family: $formularBold;
-        padding-bottom: 15px;
         border-bottom: 1px solid $greenColor;
-        font-size: 18px;
+        font-size: 1.5rem;
         text-transform: uppercase;
         margin-left: 15px;
       }
     }
   }
-  .cta-button {
-    transform: translate(0, -175px);
-    a {
-      padding: 15px 100px;
-    }
-  }
 
-  @media (min-height: 1665px) {
-    height: 100vh;
-  }
-
-  @media (max-width: 1920px) {
+  @media (min-width: 600px) {
     .stad-bg {
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 60%;
+      background-size: 100%;
+      background-position: 50% 50%;
     }
   }
-
-  @media (max-width: 992px) {
+  @media (min-width: 801px) {
     .stad-bg {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50%;
+      background-position: 50% 65%;
     }
-		h1 {
-			margin-top: 20px;
-		}
     .benefits {
-      flex-direction: column;
-			margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      order: 2;
+      flex-basis: 20%;
+      .benefit {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-icon {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 3%;
+        }
+        &-text {
+          text-transform: uppercase;
+          max-width: 242px;
+          font-size: 1rem;
+        }
+      }
+    }
+    .steps {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+    }
+    h1 {
+      flex-basis: 5%;
+    }
+    h3 {
+      flex-basis: 45%;
+    }
+  }
+  @media (min-width: 1025px) {
+    h1 {
+      flex-basis: 0%;
+    }
+    .benefits {
+      flex-basis: 10%;
+    }
+  }
+  @media (min-width: 1281px) {
+    .stad-bg {
+      background-size: 100%;
+      background-position: 50% 75%;
+    }
+    h1 {
+      flex-basis: 3%;
+    }
+    h3 {
+      flex-basis: 40%;
+    }
+    .cta-button {
+      flex-basis: 20%;
+    }
+  }
+  @media (min-width: 1921px) {
+    .stad-bg {
+      background-size: 100%;
+      background-position: 50% 100%;
+    }
+    h1 {
+      flex-basis: 3%;
+    }
+    h3 {
+      flex-basis: 40%;
+    }
+    .cta-button {
+      flex-basis: 20%;
+    }
+  }
+	@media (min-width: 1921px) and (max-height: 882px) {
+		.stad-bg {
+      background-image: none!important;
+    }
+	}
+}
+
+// html rem
+@media (min-width: 375px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 801px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1025px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1281px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// special media
+@media (min-width: 568px) and (max-height: 567px) {
+  .page-template-start {
+    .stad-bg {
+      background-image: none !important;
+    }
+    h1 {
+      flex-basis: 21%;
+    }
+    h3 {
+      flex-basis: 30%;
+    }
+    .steps {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-height: 320px) {
+  html {
+    font-size: 6px;
+  }
+  .page-template-start {
+    .stad-bg {
+      background-image: none !important;
+    }
+    h1 {
+      flex-basis: 21%;
+    }
+    h3 {
+      flex-basis: 30%;
+    }
+    .steps {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
     }
   }
 }
