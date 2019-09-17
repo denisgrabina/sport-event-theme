@@ -6,28 +6,21 @@
 	box-sizing: border-box;
 }
 
-/* Fonts */
-@font-face {
-  font-family: "Bazabet";
-  src: 
-		url("../fonts/Bazabet/Bazabet-Regular.woff") format("woff"),
-		url("../fonts/Bazabet/Bazabet-Regular.eot") format("eot"),
-		url("../fonts/Bazabet/Bazabet-Regular.ttf") format("ttf"),
-		url("../fonts/Bazabet/Bazabet-Regular.otf") format("otf");
-}
-
-@font-face {
-  font-family: "Formular-Regular";
-  src: url("../fonts/Formular/Formular-Medium.woff") format("woff"),
-   		 url("../fonts/Formular/Formular-Medium.woff2") format("woff2");
+html {
+	width: 100%;
+  color: #222;
+  font-size: 16px;
+  line-height: 1;
 }
 
 body {
+	width: 100%;
   font-size: 16px;
   min-width: 320px;
+	min-height: 320px;
   position: relative;
-	line-height: 1.1;
-  font-family: "Formular-Regular", sans-serif;
+	line-height: 1;
+  font-family: $formularMedium;
   overflow-x: hidden;
 	background-color: #25303B;
   color: #fff;
@@ -40,19 +33,13 @@ body {
 	height: auto;
 }
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.1;
-}
-
 ::-moz-selection {
-  background: #b3d4fc;
+  background: transparent;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: transparent;
   text-shadow: none;
 }
 

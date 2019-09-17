@@ -1,4 +1,7 @@
-@mixin addNewPropToChildren($selector, $prop, $value) {
-
+@mixin orderFlexContainerChildren($min, $max) {
+  @for $i from $min through $max {
+    div:nth-child(#{$i}) {
+      order: #{$i};
+    }
+  }
 }
-

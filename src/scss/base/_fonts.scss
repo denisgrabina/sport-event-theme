@@ -1,0 +1,25 @@
+/* Fonts */
+@font-face {
+  font-family: "Bazabet";
+  src: 
+		url("../fonts/Bazabet/Bazabet-Regular.woff") format("woff"),
+		url("../fonts/Bazabet/Bazabet-Regular.eot") format("eot"),
+		url("../fonts/Bazabet/Bazabet-Regular.ttf") format("ttf"),
+		url("../fonts/Bazabet/Bazabet-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Formular-Bold";
+  src: url("../fonts/Formular/Formular-Bold.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Formular-Medium";
+  src: url("../fonts/Formular/Formular-Medium.woff") format("woff"),
+   		 url("../fonts/Formular/Formular-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Formular-Light";
+  src: url("../fonts/Formular/Formular-Light.woff") format("woff")
+}

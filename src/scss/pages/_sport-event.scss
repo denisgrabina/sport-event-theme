@@ -2,9 +2,9 @@
   background-color: #000;
 
   h1 {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 73px;
-    color: #00b140;
+    color: $greenColor;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1;
@@ -34,10 +34,14 @@
     position: relative;
     padding: 0 30px;
 
-		.container {
-			display: flex;
-			flex-direction: column;
-		}
+    .container {
+      display: flex;
+      flex-direction: column;
+      @include orderFlexContainerChildren(1, 6);
+      > div:nth-child(5) {
+        order: 0;
+      }
+    }
   }
 
   .container {
@@ -49,7 +53,7 @@
   }
 
   .team-name {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     display: flex;
     justify-content: center;
     font-size: 40px;
@@ -75,6 +79,7 @@
   .team-flag img {
     max-width: 140px;
     height: 140px;
+    border-radius: 51%;
   }
 
   .vs {
@@ -91,7 +96,7 @@
   .coef {
     display: flex;
     justify-content: center;
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 40px;
   }
 
@@ -113,46 +118,17 @@
     text-transform: uppercase;
   }
 
-	.slogan {
-		text-transform: uppercase;
+  .slogan {
+    text-transform: uppercase;
     font-size: 36px;
-    transform: translateY(70px);
-    font-family: bazabet;
+    transform: translateY(40px);
+    font-family: $formularMedium;
     max-width: 900px;
     margin: 0 auto;
-	}
+  }
 
   .cta-button {
-    margin-top: 100px;
     transform: translate(0, 100px);
-    padding: 20px 30px;
-  }
-
-  .cta-button a {
-    font-family: "Formular-bold", sans-serif;
-    font-size: 33px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    background-color: #00b140;
-    cursor: pointer;
-    box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.6);
-    transition: 0.5s;
-    position: relative;
-  }
-
-  .cta-button a:hover {
-    background-color: #003f16;
-    box-shadow: none;
-    cursor: pointer;
-  }
-
-  .cta-button a:hover,
-  .cta-button a:active,
-  .cta-button a:focus {
-    outline: none;
-    border: none;
   }
 
   .cta-button a svg {
@@ -164,7 +140,7 @@
   }
 
   .cta-button a svg .o1 {
-    stroke: #00b140;
+    stroke: $greenColor;
     stroke-width: 3;
     transition: all 0.4s linear;
     fill: transparent;
@@ -175,7 +151,7 @@
     height: 100%;
     display: block;
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -204,6 +180,35 @@
     right: 5%;
   }
 
+  .cta-button {
+    a {
+      min-width: 378px;
+      font-family: $formularMedium;
+      font-size: 33px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 15px 40px;
+      background-color: $greenColor;
+      cursor: pointer;
+      box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.3);
+      transition: 0.5s;
+      position: relative;
+      letter-spacing: 2px;
+      &:hover {
+        background-color: #009d39;
+        box-shadow: none;
+        cursor: pointer;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
   .footer {
     padding: 45px 0;
     background-color: #000;
@@ -221,15 +226,15 @@
   }
 
   .step-number {
-    font-family: "Bazabet", sans-serif;
+    font-family: $bazabetFont;
     font-size: 73px;
-    color: #00b140;
+    color: $greenColor;
   }
 
   .step-text {
-    font-family: "Formular-bold", sans-serif;
+    font-family: $formularBold;
     padding-bottom: 15px;
-    border-bottom: 1px solid #00b140;
+    border-bottom: 1px solid $greenColor;
     font-size: 18px;
     text-transform: uppercase;
     margin-left: 15px;
@@ -251,40 +256,37 @@
   }
 }
 
-@media (max-width: 1600px) {
-  .page-template-event {
-    .slogan {
-			transform: translateY(20px);
-		}
-  }
-}
-
 @media (max-width: 1400px) {
   .page-template-event {
     .slogan {
-			font-size: 30px;
-		}
+      font-size: 30px;
+    }
   }
 }
 
 @media (max-width: 1270px) {
   .page-template-event {
     .slogan {
-			font-size: 24px
-		}
+      font-size: 24px;
+    }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1080px) {
   .page-template-event {
     .player {
       max-width: 275px;
       max-height: 350px;
     }
-		.slogan {
-			font-size: 24px;
-			max-width: 320px;
-		}
+  }
+}
+
+@media (max-width: 992px) {
+  .page-template-event {
+    .slogan {
+      font-size: 24px;
+      max-width: 320px;
+    }
   }
 }
 
@@ -322,11 +324,14 @@
     .player {
       display: none;
     }
-		.slogan {
-			transform: translateY(20px);
-			font-size: 18px;
-			max-width: 320px;
-		}
+    .slogan {
+      transform: translateY(20px);
+      font-size: 18px;
+      max-width: 320px;
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
+    }
     .coef {
       font-size: 22px;
     }
@@ -400,14 +405,14 @@
       font-size: 12px;
       padding: 5spx 4px;
     }
-		.date {
-			font-size: 12px;
-		}
-		.slogan {
-			transform: translateY(10px);
-			font-size: 14px;
-			max-width: 120px;
-		}
+    .date {
+      font-size: 12px;
+    }
+    .slogan {
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
+    }
   }
 }
 
@@ -416,7 +421,7 @@
   .page-template-event {
     .cta-button a {
       font-size: 18px;
-      padding: 5spx 4px;
+      padding: 5px 4px;
     }
   }
 }
@@ -432,9 +437,9 @@
     .team-name {
       margin-top: 25px;
     }
-		.slogan {
-			transform: translateY(20px);
-		}
+    .slogan {
+      transform: translateY(20px);
+    }
     .cta-button {
       margin-top: 50px;
       transform: translate(0, 0);
@@ -539,16 +544,16 @@
     }
     .team-flag,
     .coef,
-		.footer {
+    .footer {
       display: none;
     }
-		.cta-button {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%);
-			width: 100%;
-		}
+    .cta-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+    }
   }
 }
 
@@ -556,8 +561,8 @@
   .home {
     &.page-template-event {
       .main {
-				padding-top: 20px;
-			}
+        padding-top: 20px;
+      }
     }
   }
 }
@@ -565,7 +570,7 @@
 @media (min-height: 375px) {
   .home {
     &.page-template-event {
-      overflow: hidden;      
+      overflow: hidden;
     }
   }
 }
@@ -574,8 +579,8 @@
   .home {
     &.page-template-event {
       .cta-button {
-			top: 0;
-		}   
+        top: 0;
+      }
     }
   }
 }

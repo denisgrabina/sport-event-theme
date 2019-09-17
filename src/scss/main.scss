@@ -1,7 +1,15 @@
-@import "./base/_base";
+// structure
+@import "./base/_vars";
 @import "./base/_normalize";
+@import "./base/_base";
+@import "./base/_fonts";
+
+// components
+@import "./components/_steps";
+
+//mixins
 @import "./mixins/_iterator";
 
 // templates
 @import "./pages/_sport-event";
-
+@import "./pages/_start";
