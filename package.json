@@ -23,6 +23,7 @@
     "ie >= 10"
   ],
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
