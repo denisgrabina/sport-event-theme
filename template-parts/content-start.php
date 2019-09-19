@@ -26,10 +26,13 @@
 			</div>
 			<h2><?php the_field('subtitle'); ?></h2>
 			<h3><?php the_field('subtitle-accent'); ?></h3>
-			<img src="<?php the_field('players'); ?>" alt="" class="img-responsive players">
+			
+			<div class="players-button">
+				<img src="<?php the_field('players'); ?>" alt="" class="players">
 			<div class="cta-button">
 				<a href="<?php the_field('cta-link'); ?>" class="cta-link"><?php the_field('cta-text'); ?>
 				</a>
+			</div>
 			</div>
 			<div class="steps">
 				<?php while (have_rows('steps')) : the_row(); ?>
