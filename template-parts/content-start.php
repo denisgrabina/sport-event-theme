@@ -17,7 +17,7 @@
 			<div class="benefits">
 				<?php while (have_rows('benefits')) : the_row(); ?>
 					<div class="benefit">
-						<a href="<?php the_field('ben-link'); ?>" class="benefit-icon"><img src="<?php the_sub_field('ben-icon'); ?>" class="benefit-icon" /></a>
+						<a href="<?php the_sub_field('ben-link'); ?>" class="benefit-icon"><img src="<?php the_sub_field('ben-icon'); ?>" class="benefit-icon" /></a>
 						<div class="benefit-text"><?php the_sub_field('ben-text'); ?></div>
 					</div>
 				<?php
