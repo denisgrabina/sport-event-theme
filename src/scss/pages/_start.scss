@@ -65,7 +65,8 @@ html {
   }
 
   .players {
-    max-width: 617px;
+    max-width: 100%;
+		display: block;
     max-height: 820px;
     margin: 0 auto;
     order: 4;
