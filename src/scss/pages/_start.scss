@@ -22,6 +22,7 @@ html {
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: 50% 50%;
+    position: relative;
   }
 
   .container {
@@ -138,6 +139,27 @@ html {
         text-transform: uppercase;
         margin-left: 15px;
       }
+    }
+  }
+
+  .social {
+    display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 3%;
+		bottom: 7%;
+		&-link {
+			margin: 0.375rem 0;
+			transition: all .4s;
+			opacity: .8;
+			&:hover {
+				opacity: 1;
+				transform: translateY(-2px);
+			}
+		}
+    &-icon {
+      width: 3rem;
+      height: 3rem;
     }
   }
 
@@ -276,7 +298,7 @@ html {
     }
     h1 {
       flex-basis: 21%;
-			font-size: 5rem;
+      font-size: 5rem;
     }
     h2 {
       font-size: 4rem;

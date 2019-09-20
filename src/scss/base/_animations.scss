@@ -36,18 +36,24 @@
 
 @keyframes heading-blink {
   0% {
+    opacity: 0.7;
+  }
+  20% {
     opacity: 0.8;
   }
-  25% {
+  35% {
     opacity: 0.9;
   }
   50% {
     opacity: 1;
   }
-  75% {
+	63% {
     opacity: 0.9;
   }
-  100% {
+  75% {
     opacity: 0.8;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
