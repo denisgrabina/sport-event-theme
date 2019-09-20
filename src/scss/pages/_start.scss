@@ -3,6 +3,7 @@ html {
 }
 
 .page-template-start {
+  display: none;
   user-select: none;
   background-color: #414b57;
   background-image: radial-gradient(
@@ -51,18 +52,21 @@ html {
     margin-left: 2.625rem;
     font-size: 4rem;
     order: 2;
-    flex-basis: 5%;
+    flex-basis: 10%;
     animation: heading-blink 1.5s infinite linear;
   }
 
-  h3 {
+  .subtitle-accent {
+    text-decoration: none;
+    color: white;
     font-family: $bazabetFont;
     font-size: 6.25rem;
     text-shadow: 0 -0.3125rem 5rem $greenColor, 0.3125rem 0 5rem $greenColor,
       0 10px 0.3125rem black, -0.3125rem 0 5rem $greenColor;
     order: 3;
     flex-basis: 44%;
-    animation: heading-blink 1.5s infinite linear;
+    animation: heading-blink 1.5s infinite linear,
+      scale-title 4s infinite linear;
   }
 
   .players {
@@ -85,6 +89,7 @@ html {
     bottom: 14%;
     left: 0;
     right: 0;
+    animation: scale-cta 4s infinite linear;
     a {
       font-family: $formularMedium;
       font-size: 2.0625rem;
@@ -142,21 +147,38 @@ html {
     }
   }
 
-  .social {
-    display: flex;
-		flex-direction: column;
-		position: absolute;
-		right: 3%;
-		bottom: 7%;
+	.app {
 		&-link {
-			margin: 0.375rem 0;
-			transition: all .4s;
-			opacity: .8;
-			&:hover {
-				opacity: 1;
-				transform: translateY(-2px);
-			}
+			transform: rotate(-90deg);
 		}
+		&-icon {
+			display: flex;
+      position: absolute;
+      left: 0;
+    right: 0;
+    bottom: 0;
+    top: 24%;
+		width: 13rem;
+    height: 14rem;
+    z-index: 2;
+		}
+	}
+
+	.social {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 3%;
+    bottom: 7%;
+    &-link {
+      margin: 0.375rem 0;
+      transition: all 0.4s;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
     &-icon {
       width: 3rem;
       height: 3rem;
@@ -169,7 +191,22 @@ html {
       background-size: 100%;
       background-position: 50% 50%;
     }
-  }
+		.app {
+  		&-icon {
+        top: 7%;
+  			left: 0.9%;
+  			transform: rotate(-90deg);
+  			transition: all 0.4s;
+        opacity: 0.8;
+  			width: 8rem;
+        height: 6rem;
+  			&:hover {
+          opacity: 1;
+  				transform: rotate(0deg);
+        }
+  		}
+    }
+	}
   @media (min-width: 801px) {
     .benefits {
       display: flex;
@@ -186,6 +223,10 @@ html {
           width: 3rem;
           height: 3rem;
           margin-right: 3%;
+          transition: all 0.7s;
+          &:hover {
+            transform: translateY(-2px);
+          }
           &:hover ~ .benefit-text {
             opacity: 1;
           }
@@ -199,7 +240,7 @@ html {
           margin-top: 0.3125rem;
         }
       }
-    }
+		}
     .steps {
       flex-direction: row;
       justify-content: space-evenly;
@@ -209,7 +250,7 @@ html {
       flex-basis: 15%;
       margin-top: 0;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 15%;
     }
   }
@@ -225,7 +266,7 @@ html {
     h1 {
       flex-basis: 3%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 40%;
     }
     .cta-button {
@@ -240,7 +281,7 @@ html {
     h1 {
       flex-basis: 3%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 40%;
     }
     .cta-button {
@@ -303,8 +344,8 @@ html {
     h2 {
       font-size: 4rem;
     }
-    h3 {
-      flex-basis: 30%;
+    .subtitle-accent {
+      flex-basis: 20%;
       font-size: 4rem;
     }
     .players {
@@ -319,6 +360,15 @@ html {
       justify-content: space-evenly;
       margin: 0;
     }
+	  .players-button {
+      flex-basis: 18%;
+    }
+		.app-icon {
+      top: 11%;
+    }
+		.social {
+      top: 7%;
+		}
   }
 }
 
@@ -333,7 +383,7 @@ html {
     h1 {
       flex-basis: 21%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 30%;
     }
     .steps {
