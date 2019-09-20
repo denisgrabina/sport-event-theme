@@ -1,6 +1,10 @@
 const body = document.querySelector("body");
+
 if (body.classList.contains("page-template-event")) {
-	document.addEventListener('DOMContentLoaded', ()=>body.style.display = 'block');
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => (body.style.display = "block")
+  );
   const playerContainer = document.querySelector(".player-container");
   const leftPlayer = playerContainer.children[0];
   const rightPlayer = playerContainer.children[1];
@@ -10,8 +14,8 @@ if (body.classList.contains("page-template-event")) {
   const xCoef = document.querySelector(".x");
   const coefs = [w1Coef, xCoef, w2Coef];
 
-	// check coefs exist
-  for (let i = 0; i < coefs.length; ++i) 
+  // check coefs exist
+  for (let i = 0; i < coefs.length; ++i)
     if (!coefs[i].textContent) coef.style.visibility = "hidden";
 
   // animate players
@@ -32,5 +36,11 @@ if (body.classList.contains("page-template-event")) {
       }
     }
   }
+}
 
+if (body.classList.contains("page-template-start")) {
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => (body.style.display = "block")
+  );
 }
