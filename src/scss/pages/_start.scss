@@ -128,10 +128,10 @@ html {
     margin: 0 auto;
     order: 6;
     text-align: left;
-    margin-bottom: 1rem;
     .step {
       display: flex;
       align-items: center;
+      margin-bottom: 0.5rem;
       &-number {
         font-family: $bazabetFont;
         font-size: 3rem;
@@ -147,33 +147,35 @@ html {
     }
   }
 
-	.app {
-		&-link {
-			transform: rotate(-90deg);
-		}
-		&-icon {
-			display: flex;
+  .app {
+    &-link {
+      transform: rotate(-90deg);
+    }
+    &-icon {
+      display: flex;
       position: absolute;
       left: 0;
-    right: 0;
-    bottom: 0;
-    top: 24%;
-		width: 13rem;
-    height: 14rem;
-    z-index: 2;
-		}
-	}
+      right: 0;
+      bottom: 0;
+      top: 24%;
+      width: 13rem;
+      height: 14rem;
+      z-index: 2;
+    }
+  }
 
-	.social {
+  .social {
     display: flex;
     flex-direction: column;
     position: absolute;
     right: 3%;
     bottom: 7%;
+		z-index: 3;
     &-link {
       margin: 0.375rem 0;
       transition: all 0.4s;
       opacity: 0.8;
+			z-index: 3;
       &:hover {
         opacity: 1;
         transform: translateY(-2px);
@@ -191,22 +193,22 @@ html {
       background-size: 100%;
       background-position: 50% 50%;
     }
-		.app {
-  		&-icon {
+    .app {
+      &-icon {
         top: 7%;
-  			left: 0.9%;
-  			transform: rotate(-90deg);
-  			transition: all 0.4s;
+        left: 0.9%;
+        transform: rotate(-90deg);
+        transition: all 0.4s;
         opacity: 0.8;
-  			width: 8rem;
+        width: 8rem;
         height: 6rem;
-  			&:hover {
+        &:hover {
           opacity: 1;
-  				transform: rotate(0deg);
+          transform: rotate(0deg);
         }
-  		}
+      }
     }
-	}
+  }
   @media (min-width: 801px) {
     .benefits {
       display: flex;
@@ -240,7 +242,7 @@ html {
           margin-top: 0.3125rem;
         }
       }
-		}
+    }
     .steps {
       flex-direction: row;
       justify-content: space-evenly;
@@ -360,14 +362,28 @@ html {
       justify-content: space-evenly;
       margin: 0;
     }
-	  .players-button {
+    .players-button {
       flex-basis: 18%;
     }
-		.app-icon {
+    .app-icon {
       top: 11%;
     }
-		.social {
+    .social {
       top: 7%;
+    }
+  }
+}
+
+@media (min-width: 801px)
+			 and (min-height: 321px) 
+			 and (max-width: 1024px)
+			 and (max-height: 567px) {
+  .page-template-start {
+		.app-icon {
+			top: 40%;
+		}
+		.social {
+			top: 20%;
 		}
   }
 }
