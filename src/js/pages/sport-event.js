@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const ctaLink = document.querySelector(".cta-link");
 
 if (body.classList.contains("page-template-event")) {
   document.addEventListener(
@@ -44,3 +45,13 @@ if (body.classList.contains("page-template-start")) {
     () => (body.style.display = "block")
   );
 }
+
+const addConvScript = e => {
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://juntives-unding.icu/conversion.js?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL";
+  document.getElementsByTagName("head")[0].appendChild(script);
+  return false;
+};
+
+ctaLink.addEventListener("click", addConvScript);
