@@ -170,10 +170,12 @@ html {
     position: absolute;
     right: 3%;
     bottom: 7%;
+		z-index: 3;
     &-link {
       margin: 0.375rem 0;
       transition: all 0.4s;
       opacity: 0.8;
+			z-index: 3;
       &:hover {
         opacity: 1;
         transform: translateY(-2px);
