@@ -1,4 +1,5 @@
 .page-template-event {
+	display: none;
   background-color: #000;
 
   h1 {
@@ -55,18 +56,25 @@
   .team-name {
     font-family: $bazabetFont;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 40px;
     margin-top: 100px;
+    &-left {
+      transform: translateX(-18%)
+    }
+    &-right {
+      transform: translateX(18%)
+    }
   }
 
   .team-name div {
-    width: 340px;
+    margin: 0 2%;
+    max-width: 340px;
   }
 
   .team-flag {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     margin-top: 30px;
@@ -74,12 +82,12 @@
 
   .team-flag div {
     margin: 0 4%;
+    border-radius: 50%;
   }
 
   .team-flag img {
     max-width: 140px;
     height: 140px;
-    border-radius: 51%;
   }
 
   .vs {
@@ -95,7 +103,7 @@
 
   .coef {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     font-family: $bazabetFont;
     font-size: 40px;
   }

@@ -3,6 +3,7 @@ html {
 }
 
 .page-template-start {
+  display: none;
   user-select: none;
   background-color: #414b57;
   background-image: radial-gradient(
@@ -22,6 +23,7 @@ html {
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: 50% 50%;
+    position: relative;
   }
 
   .container {
@@ -50,16 +52,30 @@ html {
     margin-left: 2.625rem;
     font-size: 4rem;
     order: 2;
-    flex-basis: 5%;
+    flex-basis: 10%;
+    animation: heading-blink 1.5s infinite linear;
   }
 
-  h3 {
+  .subtitle-accent {
+    text-decoration: none;
+    color: white;
     font-family: $bazabetFont;
     font-size: 6.25rem;
     text-shadow: 0 -0.3125rem 5rem $greenColor, 0.3125rem 0 5rem $greenColor,
       0 10px 0.3125rem black, -0.3125rem 0 5rem $greenColor;
     order: 3;
     flex-basis: 44%;
+    animation: heading-blink 1.5s infinite linear,
+      scale-title 4s infinite linear;
+  }
+
+  .players {
+    max-width: 100vw;
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    margin: 0 auto;
+    order: 4;
   }
 
   .benefits {
@@ -67,8 +83,13 @@ html {
   }
 
   .cta-button {
-    order: 4;
+    order: 5;
     flex-basis: 15%;
+    position: absolute;
+    bottom: 14%;
+    left: 0;
+    right: 0;
+    animation: scale-cta 4s infinite linear;
     a {
       font-family: $formularMedium;
       font-size: 2.0625rem;
@@ -96,12 +117,18 @@ html {
     }
   }
 
+  .players-button {
+    position: relative;
+    order: 6;
+  }
+
   .steps {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     order: 6;
     text-align: left;
+    margin-bottom: 1rem;
     .step {
       display: flex;
       align-items: center;
@@ -120,69 +147,126 @@ html {
     }
   }
 
+	.app {
+		&-link {
+			transform: rotate(-90deg);
+		}
+		&-icon {
+			display: flex;
+      position: absolute;
+      left: 0;
+    right: 0;
+    bottom: 0;
+    top: 24%;
+		width: 13rem;
+    height: 14rem;
+    z-index: 2;
+		}
+	}
+
+	.social {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 3%;
+    bottom: 7%;
+    &-link {
+      margin: 0.375rem 0;
+      transition: all 0.4s;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
   @media (min-width: 600px) {
     .stad-bg {
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: 50% 50%;
     }
-  }
-  @media (min-width: 801px) {
-    .stad-bg {
-      background-position: 50% 65%;
+		.app {
+  		&-icon {
+        top: 7%;
+  			left: 0.9%;
+  			transform: rotate(-90deg);
+  			transition: all 0.4s;
+        opacity: 0.8;
+  			width: 8rem;
+        height: 6rem;
+  			&:hover {
+          opacity: 1;
+  				transform: rotate(0deg);
+        }
+  		}
     }
+	}
+  @media (min-width: 801px) {
     .benefits {
       display: flex;
       justify-content: space-around;
-      margin: 0 auto;
-      order: 2;
-      flex-basis: 20%;
+      margin: 0.625rem auto 0;
+      order: 0;
+      flex-basis: 12%;
       .benefit {
-        text-align: left;
+        text-align: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         &-icon {
-          width: 1.25rem;
-          height: 1.25rem;
+          width: 3rem;
+          height: 3rem;
           margin-right: 3%;
+          transition: all 0.7s;
+          &:hover {
+            transform: translateY(-2px);
+          }
+          &:hover ~ .benefit-text {
+            opacity: 1;
+          }
         }
         &-text {
           text-transform: uppercase;
           max-width: 242px;
-          font-size: 1rem;
+          font-size: 0.8125rem;
+          transition: opacity 0.5s;
+          opacity: 0;
+          margin-top: 0.3125rem;
         }
       }
-    }
+		}
     .steps {
       flex-direction: row;
       justify-content: space-evenly;
-      margin: 0;
+      margin: 0 0 1rem;
     }
     h1 {
-      flex-basis: 5%;
+      flex-basis: 15%;
+      margin-top: 0;
     }
-    h3 {
-      flex-basis: 45%;
+    .subtitle-accent {
+      flex-basis: 15%;
     }
   }
   @media (min-width: 1025px) {
     h1 {
-      flex-basis: 0%;
+      flex-basis: 10%;
     }
     .benefits {
-      flex-basis: 10%;
+      flex-basis: 24%;
     }
   }
   @media (min-width: 1281px) {
-    .stad-bg {
-      background-size: 100%;
-      background-position: 50% 75%;
-    }
     h1 {
       flex-basis: 3%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 40%;
     }
     .cta-button {
@@ -197,18 +281,27 @@ html {
     h1 {
       flex-basis: 3%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 40%;
     }
     .cta-button {
+      bottom: 18%;
       flex-basis: 20%;
     }
   }
-	@media (min-width: 1921px) and (max-height: 882px) {
-		.stad-bg {
-      background-image: none!important;
+  @media (min-width: 1921px) and (max-height: 882px) {
+    .stad-bg {
+      background-image: none !important;
     }
-	}
+    .players {
+      display: none;
+    }
+  }
+  @media (min-width: 2560px) and (min-height: 1151px) {
+    .container {
+      justify-content: space-evenly;
+    }
+  }
 }
 
 // html rem
@@ -246,15 +339,36 @@ html {
     }
     h1 {
       flex-basis: 21%;
+      font-size: 5rem;
     }
-    h3 {
-      flex-basis: 30%;
+    h2 {
+      font-size: 4rem;
+    }
+    .subtitle-accent {
+      flex-basis: 20%;
+      font-size: 4rem;
+    }
+    .players {
+      display: none;
+    }
+    .cta-button {
+      transform: translateY(-26px);
+      position: static;
     }
     .steps {
       flex-direction: row;
       justify-content: space-evenly;
       margin: 0;
     }
+	  .players-button {
+      flex-basis: 18%;
+    }
+		.app-icon {
+      top: 11%;
+    }
+		.social {
+      top: 7%;
+		}
   }
 }
 
@@ -269,7 +383,7 @@ html {
     h1 {
       flex-basis: 21%;
     }
-    h3 {
+    .subtitle-accent {
       flex-basis: 30%;
     }
     .steps {
