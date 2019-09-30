@@ -1,0 +1,338 @@
+/* ========= Media Queries =========  */
+
+@media (min-width: 1920px) {
+  .page-template-event {
+    .main {
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .page-template-event {
+    .slogan {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .page-template-event {
+    .slogan {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .page-template-event {
+    .player {
+      max-width: 275px;
+      max-height: 350px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-template-event {
+    .slogan {
+      font-size: 24px;
+      max-width: 320px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template-event {
+    .main {
+      padding-top: 30px;
+      background-position: top;
+      background-size: 300%;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    .team-name {
+      font-size: 22px;
+      margin-top: 40px;
+    }
+    .team-name div {
+      max-width: 100%;
+      margin: 0 7%;
+    }
+    .team-flag img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+    .vs {
+      font-size: 22px;
+      padding: 18px 12px 24px;
+    }
+    .player {
+      display: none;
+    }
+    .slogan {
+      transform: translateY(20px);
+      font-size: 18px;
+      max-width: 320px;
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
+    }
+    .coef {
+      font-size: 22px;
+    }
+    .date {
+      margin-top: 28px;
+      font-size: 22px;
+    }
+    .coef div {
+      margin: 15px 5% 0;
+    }
+    .cta-button {
+      margin-top: 20px;
+      transform: translate(0, 0);
+      padding: 20px 30px;
+    }
+    .cta-button a {
+      font-size: 16px;
+      padding: 10px 15px;
+    }
+    .cta-button a svg {
+      display: none;
+    }
+    .footer {
+      padding: 20px 0;
+      background-color: #000;
+      position: relative;
+    }
+    .steps {
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+    .step-number {
+      font-size: 36px;
+    }
+    .step-text {
+      font-size: 14px;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .page-template-event {
+    .main {
+      padding-bottom: 10px;
+    }
+    .team-name {
+      font-size: 18px;
+      margin-top: 26px;
+    }
+    .team-name div {
+      max-width: 150px;
+    }
+    .team-flag {
+      margin-top: 16px;
+    }
+    .player {
+      max-width: 1200px;
+      max-height: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-template-event {
+    .cta-button a {
+      font-size: 12px;
+      padding: 5spx 4px;
+    }
+    .date {
+      font-size: 12px;
+    }
+    .slogan {
+      transform: translateY(10px);
+      font-size: 14px;
+      max-width: 120px;
+    }
+  }
+}
+
+/* iphone X */
+// @media (width: 375px) and (height: 812px) {
+//   .page-template-event {
+//     .cta-button a {
+//       font-size: 18px;
+//       padding: 5px 4px;
+//     }
+//   }
+// }
+
+/* iPad landscape */
+@media (width: 1024px) and (height: 768px) {
+  .page-template-event {
+    .main {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    .team-name {
+      margin-top: 25px;
+    }
+    .slogan {
+      transform: translateY(20px);
+    }
+    .cta-button {
+      margin-top: 50px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+/* iPad portrait */
+@media (width: 768px) and (height: 1024px) {
+  .page-template-event {
+    .main {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    .team-name {
+      margin-top: 25px;
+    }
+    .cta-button {
+      margin-top: 50px;
+      transform: translate(0, 0);
+    }
+    .event-data .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 60vh;
+    }
+  }
+}
+
+/* iPad Pro landscape */
+@media (width: 1366px) and (height: 1024px) {
+  .page-template-event {
+    .main {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    .team-name {
+      margin-top: 25px;
+    }
+    .cta-button {
+      margin-top: 50px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+/* Laptop with HiDPI Screen */
+@media (width: 1440px) and (height: 900px) {
+  .page-template-event {
+    .main {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    .team-name {
+      margin-top: 25px;
+    }
+    .cta-button {
+      margin-top: 50px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+/* Laptop with MDPI Screen */
+@media (width: 1280px) and (height: 800px) {
+  .page-template-event {
+    .main {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      min-height: auto;
+    }
+    .team-name {
+      margin-top: 25px;
+    }
+    .cta-button {
+      margin-top: 50px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media (max-width: 650px) and (min-height: 376px) and (max-height: 850px) {
+  .page-template-event {
+    .event-data .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 70vh;
+    }
+  }
+}
+
+/**  Specific Styles  */
+.home {
+  &.page-template-event {
+    .main {
+      height: 100vh;
+    }
+    .team-flag,
+    .coef,
+    .footer {
+      display: none;
+    }
+    .cta-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+    }
+  }
+}
+
+@media (max-height: 420px) {
+  .home {
+    &.page-template-event {
+      .main {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media (min-height: 375px) {
+  .home {
+    &.page-template-event {
+      overflow: hidden;
+    }
+  }
+}
+
+@media (width: 812px) and (height: 375px) {
+  .home {
+    &.page-template-event {
+      .cta-button {
+        top: 0;
+      }
+    }
+  }
+}

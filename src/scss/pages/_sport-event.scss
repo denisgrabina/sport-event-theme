@@ -1,10 +1,23 @@
+html {
+  font-size: 8px;
+}
+
 .page-template-event {
-	display: none;
+  display: none;
   background-color: #000;
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
   h1 {
     font-family: $bazabetFont;
-    font-size: 73px;
+    font-size: 4.5625rem;
     color: $greenColor;
     margin-top: 0;
     margin-bottom: 0;
@@ -12,7 +25,7 @@
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 1.625rem;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
@@ -20,50 +33,47 @@
   }
 
   .main {
-    padding-top: 135px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: cover;
     position: relative;
-    min-height: 1176px;
+    max-width: 1920px;
+    max-height: 1200px;
+  }
+
+  .container {
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.875rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .event-data {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1000px;
     position: relative;
-    padding: 0 30px;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      @include orderFlexContainerChildren(1, 6);
-      > div:nth-child(5) {
-        order: 0;
-      }
-    }
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 3;
-    padding: 0 30px;
   }
 
   .team-name {
     font-family: $bazabetFont;
     display: flex;
     justify-content: space-between;
-    font-size: 40px;
-    margin-top: 100px;
+    font-size: 2.5rem;
     &-left {
-      transform: translateX(-18%)
+      transform: translateX(-18%);
     }
     &-right {
-      transform: translateX(18%)
+      transform: translateX(18%);
     }
   }
 
@@ -77,48 +87,44 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-top: 30px;
-  }
-
-  .team-flag div {
-    margin: 0 4%;
-    border-radius: 50%;
+    margin: 1.875rem auto;
   }
 
   .team-flag img {
-    max-width: 140px;
-    height: 140px;
+    max-width: 8.75rem;
+    height: 8.75rem;
   }
 
   .vs {
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 0;
-    font-size: 40px;
+    line-height: 1;
+    font-size: 2.5rem;
     background: rgba(0, 195, 21, 0.5);
     border-radius: 50%;
-    padding: 32px 18px 37px;
+    padding: 2rem;
   }
 
   .coef {
     display: flex;
     justify-content: space-evenly;
     font-family: $bazabetFont;
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .coef div {
     background-color: rgba(0, 195, 21, 0.5);
-    padding: 7px 15px 0;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     line-height: 1;
-    margin: 40px 5% 0;
+    margin: 2.5rem 5%;
   }
 
   .date {
-    margin-top: 75px;
-    font-size: 26px;
+    font-size: 1.625rem;
   }
 
   .day {
@@ -128,41 +134,10 @@
 
   .slogan {
     text-transform: uppercase;
-    font-size: 36px;
-    transform: translateY(40px);
+    font-size: 2.25rem;
     font-family: $formularMedium;
     max-width: 900px;
     margin: 0 auto;
-  }
-
-  .cta-button {
-    transform: translate(0, 100px);
-  }
-
-  .cta-button a svg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .cta-button a svg .o1 {
-    stroke: $greenColor;
-    stroke-width: 3;
-    transition: all 0.4s linear;
-    fill: transparent;
-  }
-
-  .player-container {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    bottom: 0;
-    left: 0;
   }
 
   .translated-left {
@@ -173,36 +148,44 @@
     transform: translate(-30px, 0);
   }
 
+  .players {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 15%;
+    display: none;
+  }
+
   .player {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     transition: transform 0.5s linear;
-    max-width: 380px;
-  }
-
-  .player-left {
-    left: 5%;
-  }
-
-  .player-right {
-    right: 5%;
+    max-height: 200px;
+    &-left {
+      left: 10%;
+    }
+    &-right {
+      right: 10%;
+    }
   }
 
   .cta-button {
+    animation: scale-cta 4s infinite linear;
+    padding: 0.9375rem 2.5rem;
     a {
-      min-width: 378px;
       font-family: $formularMedium;
-      font-size: 33px;
+      font-size: 2.0625rem;
       color: white;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 15px 40px;
+      padding: 0.9375rem 2.5rem;
       background-color: $greenColor;
       cursor: pointer;
-      box-shadow: 8px 8px 0 rgba(0, 31, 11, 0.3);
+      box-shadow: 0.5rem 0.5rem 0 rgba(0, 31, 11, 0.3);
       transition: 0.5s;
       position: relative;
-      letter-spacing: 2px;
+      letter-spacing: 0.125rem;
       &:hover {
         background-color: #009d39;
         box-shadow: none;
@@ -217,378 +200,103 @@
     }
   }
 
-  .footer {
-    padding: 45px 0;
-    background-color: #000;
-  }
-
   .steps {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .step {
-    display: flex;
-    align-items: center;
-  }
-
-  .step-number {
-    font-family: $bazabetFont;
-    font-size: 73px;
-    color: $greenColor;
-  }
-
-  .step-text {
-    font-family: $formularBold;
-    padding-bottom: 15px;
-    border-bottom: 1px solid $greenColor;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-left: 15px;
-  }
-
-  .footer {
-    max-width: 1600px;
+    flex-direction: column;
     margin: 0 auto;
-  }
-}
-
-/* ========= Media Queries =========  */
-
-@media (min-width: 1920px) {
-  .page-template-event {
-    .main {
-      background-size: cover;
+    text-align: left;
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      &-number {
+        font-family: $bazabetFont;
+        font-size: 3rem;
+        color: $greenColor;
+      }
+      &-text {
+        font-family: $formularBold;
+        border-bottom: 1px solid $greenColor;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-left: 1rem;
+      }
     }
   }
-}
 
-@media (max-width: 1400px) {
-  .page-template-event {
-    .slogan {
-      font-size: 30px;
-    }
-  }
-}
+  // @media (min-width: 600px) {
 
-@media (max-width: 1270px) {
-  .page-template-event {
-    .slogan {
-      font-size: 24px;
-    }
-  }
-}
-
-@media (max-width: 1080px) {
-  .page-template-event {
-    .player {
-      max-width: 275px;
-      max-height: 350px;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .page-template-event {
-    .slogan {
-      font-size: 24px;
-      max-width: 320px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .page-template-event {
-    .main {
-      padding-top: 30px;
-      background-position: top;
-      background-size: 300%;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    h2 {
-      font-size: 14px;
-    }
-    .team-name {
-      font-size: 22px;
-      margin-top: 40px;
-    }
-    .team-name div {
-      max-width: 100%;
-      margin: 0 7%;
-    }
-    .team-flag img {
-      max-width: 100px;
-      max-height: 100px;
-    }
-    .vs {
-      font-size: 22px;
-      padding: 18px 12px 24px;
-    }
-    .player {
-      display: none;
-    }
-    .slogan {
-      transform: translateY(20px);
-      font-size: 18px;
-      max-width: 320px;
-      transform: translateY(10px);
-      font-size: 14px;
-      max-width: 120px;
-    }
-    .coef {
-      font-size: 22px;
-    }
-    .date {
-      margin-top: 28px;
-      font-size: 22px;
-    }
-    .coef div {
-      margin: 15px 5% 0;
-    }
-    .cta-button {
-      margin-top: 20px;
-      transform: translate(0, 0);
-      padding: 20px 30px;
-    }
-    .cta-button a {
-      font-size: 16px;
-      padding: 10px 15px;
-    }
-    .cta-button a svg {
-      display: none;
-    }
-    .footer {
-      padding: 20px 0;
-      background-color: #000;
-      position: relative;
+  // }
+  @media (min-width: 801px) {
+    .players {
+      display: block;
     }
     .steps {
-      flex-direction: column;
-      align-items: flex-start;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 0%);
-    }
-    .step-number {
-      font-size: 36px;
-    }
-    .step-text {
-      font-size: 14px;
-      padding-bottom: 2px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0 0 1rem;
     }
   }
-}
-
-@media (max-width: 650px) {
-  .page-template-event {
+  @media (min-width: 1025px) {
+    .player {
+      bottom: 20px;
+      max-height: 250px;
+      &-left {
+        left: 8%;
+      }
+      &-right {
+        right: 8%;
+      }
+    }
+  }
+  @media (min-width: 1281px) {
     .main {
-      padding-bottom: 10px;
-    }
-    .team-name {
-      font-size: 18px;
-      margin-top: 26px;
-    }
-    .team-name div {
-      max-width: 150px;
-    }
-    .team-flag {
-      margin-top: 16px;
+      min-height: 900px;
     }
     .player {
-      max-width: 1200px;
-      max-height: 150px;
+      bottom: 20px;
+      max-height: 400px;
+      &-left {
+        left: 0;
+      }
+      &-right {
+        right: 0;
+      }
     }
   }
+  // @media (min-width: 1921px) and (max-height: 882px) {
+
+  // }
 }
 
-@media (max-width: 480px) {
+// @media (min-width: 2560px) and (min-height: 1151px) {
+//   .container {
+//     justify-content: space-evenly;
+//   }
+// }
+
+@media (min-width: 568px) and (max-height: 567px) {
   .page-template-event {
-    .cta-button a {
-      font-size: 12px;
-      padding: 5spx 4px;
-    }
-    .date {
-      font-size: 12px;
-    }
-    .slogan {
-      transform: translateY(10px);
-      font-size: 14px;
-      max-width: 120px;
-    }
-  }
-}
-
-/* iphone X */
-@media (width: 375px) and (height: 812px) {
-  .page-template-event {
-    .cta-button a {
-      font-size: 18px;
-      padding: 5px 4px;
-    }
-  }
-}
-
-/* iPad landscape */
-@media (width: 1024px) and (height: 768px) {
-  .page-template-event {
-    .main {
-      padding-top: 25px;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    .team-name {
-      margin-top: 25px;
-    }
-    .slogan {
-      transform: translateY(20px);
-    }
-    .cta-button {
-      margin-top: 50px;
-      transform: translate(0, 0);
-    }
-  }
-}
-
-/* iPad portrait */
-@media (width: 768px) and (height: 1024px) {
-  .page-template-event {
-    .main {
-      padding-top: 25px;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    .team-name {
-      margin-top: 25px;
-    }
-    .cta-button {
-      margin-top: 50px;
-      transform: translate(0, 0);
-    }
-    .event-data .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 60vh;
-    }
-  }
-}
-
-/* iPad Pro landscape */
-@media (width: 1366px) and (height: 1024px) {
-  .page-template-event {
-    .main {
-      padding-top: 25px;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    .team-name {
-      margin-top: 25px;
-    }
-    .cta-button {
-      margin-top: 50px;
-      transform: translate(0, 0);
-    }
-  }
-}
-
-/* Laptop with HiDPI Screen */
-@media (width: 1440px) and (height: 900px) {
-  .page-template-event {
-    .main {
-      padding-top: 25px;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    .team-name {
-      margin-top: 25px;
-    }
-    .cta-button {
-      margin-top: 50px;
-      transform: translate(0, 0);
-    }
-  }
-}
-
-/* Laptop with MDPI Screen */
-@media (width: 1280px) and (height: 800px) {
-  .page-template-event {
-    .main {
-      padding-top: 25px;
-      padding-bottom: 30px;
-      min-height: auto;
-    }
-    .team-name {
-      margin-top: 25px;
-    }
-    .cta-button {
-      margin-top: 50px;
-      transform: translate(0, 0);
-    }
-  }
-}
-
-@media (max-width: 650px) and (min-height: 376px) and (max-height: 850px) {
-  .page-template-event {
-    .event-data .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 70vh;
-    }
-  }
-}
-
-/**  Specific Styles  */
-.home {
-  &.page-template-event {
-    .main {
-      height: 100vh;
-    }
-    .team-flag,
-    .coef,
-    .footer {
+    .player {
       display: none;
     }
-    .cta-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%);
-      width: 100%;
-    }
   }
 }
 
-@media (max-height: 420px) {
-  .home {
-    &.page-template-event {
-      .main {
-        padding-top: 20px;
-      }
-    }
-  }
-}
+// @media (min-width: 801px)
+// 			 and (min-height: 321px)
+// 			 and (max-width: 1024px)
+// 			 and (max-height: 567px) {
+//   .page-template-event {
 
-@media (min-height: 375px) {
-  .home {
-    &.page-template-event {
-      overflow: hidden;
-    }
-  }
-}
+//   }
+// }
 
-@media (width: 812px) and (height: 375px) {
-  .home {
-    &.page-template-event {
-      .cta-button {
-        top: 0;
-      }
-    }
-  }
-}
+// @media (max-height: 320px) {
+//   html {
+//     font-size: 6px;
+//   }
+//   .page-template-event {
+
+//   }
+// }

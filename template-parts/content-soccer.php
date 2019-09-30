@@ -11,12 +11,18 @@
 ?>
 
 <main class="main" style="background-image: url(<?php the_field('event-football-bg') ?>);">
-	<header class="header">
-		<h1><?php the_field('title'); ?></h1>
-		<h2><?php the_field('subtitle'); ?></h2>
-	</header>
-	<div class="event-data">
-		<div class="container">
+	<div class="container">
+		<header class="header">
+			<h1><?php the_field('title'); ?></h1>
+			<h2><?php the_field('subtitle'); ?></h2>
+		</header>
+
+		<div class="slogan">
+			<?php the_field('slogan'); ?>
+		</div>
+
+		<div class="event-data">
+
 			<div class="team-name">
 				<div class="team-name-left"><?php the_field('team-name-left'); ?></div>
 				<div class="team-name-right"><?php the_field('team-name-right'); ?></div>
@@ -44,36 +50,26 @@
 				<div class="day"><?php the_field('day'); ?></div>
 				<div class="time"><?php the_field('time'); ?></div>
 			</div>
-
-			<div class="slogan">
-				<?php the_field('slogan'); ?>
-			</div>
-
-			<div class="cta-button">
-				<a href="<?php the_field('cta-link'); ?>" class="cta-link"><?php the_field('cta-link-text'); ?>
-					<!-- <svg>
-						<polyline class="o1" points="2 2, 368 2, 368 77, 2 77, 2 2"></polyline>
-					</svg> -->
-				</a>
-			</div>
 		</div>
 
-		<div class="player-container">
+		<div class="cta-button">
+			<a href="<?php the_field('cta-link'); ?>" class="cta-link"><?php the_field('cta-link-text'); ?>
+			</a>
+		</div>
+
+		<div class="steps">
+			<?php while (have_rows('steps')) : the_row(); ?>
+				<div class="step">
+					<div class="step-number"><?php the_sub_field('step-num'); ?></div>
+					<div class="step-text"><?php the_sub_field('step-text'); ?></div>
+				</div>
+			<?php
+			endwhile;
+			?>
+		</div>
+		<div class="players">
 			<img src="<?php the_field('player-left'); ?>" class="img-responsive player player-left" />
 			<img src="<?php the_field('player-right'); ?>" class="img-responsive player player-right" />
 		</div>
 	</div>
 </main>
-
-<footer class="footer">
-	<div class="steps">
-			<?php while (have_rows('steps')) : the_row(); ?>
-				<div class="step">
-				<div class="step-number"><?php the_sub_field('step-num'); ?></div>
-				<div class="step-text"><?php the_sub_field('step-text'); ?></div>
-			</div>
-			<?php
-			endwhile;
-		?>
-	</div>
-</footer>
