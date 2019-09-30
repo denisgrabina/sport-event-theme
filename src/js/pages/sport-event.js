@@ -6,7 +6,7 @@ if (body.classList.contains("page-template-event")) {
     "DOMContentLoaded",
     () => (body.style.display = "block")
   );
-  const playerContainer = document.querySelector(".player-container");
+  const playerContainer = document.querySelector(".players");
   const leftPlayer = playerContainer.children[0];
   const rightPlayer = playerContainer.children[1];
   const coef = document.querySelector(".coef");
