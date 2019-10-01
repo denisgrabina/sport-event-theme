@@ -34,3 +34,4 @@ function add_default_value_to_image_field($field) {
 }
 
 add_filter('show_admin_bar', '__return_false');
+add_filter('acf/format_value/type=textarea', 'do_shortcode');

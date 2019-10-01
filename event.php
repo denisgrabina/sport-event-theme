@@ -14,6 +14,6 @@
 
 get_header();
 
-get_template_part('template-parts/content', 'soccer');
+get_template_part('template-parts/content', 'event');
 
 get_footer();

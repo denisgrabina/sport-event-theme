@@ -11,6 +11,8 @@
 ?>
 
 <main class="main" style="background-image: url(<?php the_field('event-football-bg') ?>);">
+	<?php echo do_shortcode('' . the_field('timer') . ''); ?>
+
 	<div class="container">
 		<header class="header">
 			<h1><?php the_field('title'); ?></h1>
@@ -22,6 +24,7 @@
 		</div>
 
 		<div class="event-data">
+			<div class="left"></div>
 
 			<div class="team-name">
 				<div class="team-name-left"><?php the_field('team-name-left'); ?></div>
