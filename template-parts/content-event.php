@@ -11,8 +11,8 @@
 ?>
 
 <main class="main" style="background-image: url(<?php the_field('event-football-bg') ?>);">
-	<?php echo do_shortcode('[elfsight_countdown_timer id="1"]'); ?>
-	
+	<?php echo do_shortcode('' . the_field('timer') . ''); ?>
+
 	<div class="container">
 		<header class="header">
 			<h1><?php the_field('title'); ?></h1>
