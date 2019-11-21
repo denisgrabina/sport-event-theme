@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template name: Start
  *
@@ -14,6 +15,11 @@
 
 get_header();
 
-get_template_part('template-parts/content', 'start');
+if (is_front_page() || is_page('start-bazabet')) {
+	get_template_part('template-parts/content', 'start');
+} 
+if (is_page('four-plus-one')) {
+	get_template_part('template-parts/promo/content', 'four-plus-one');
+}
 
 get_footer();
