@@ -1,93 +1,88 @@
-.page-template-start {
-  &.page-four-plus-one, 
-  &.page-four-plus-one-isport, 
-  &.page-four-plus-one-football, 
-  &.page-four-plus-one-exoclick {
-    background-color: #132530;
-    background-image: radial-gradient(
-      ellipse at center,
-      rgba(15, 71, 108, 1) 0%,
-      rgba(19, 37, 48, 0.67) 75%,
-      rgba(19, 37, 48, 1) 100%
-    );
-    .stad-bg {
+body[data-slug^="four-plus-one"] {
+  background-color: #132530;
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(15, 71, 108, 1) 0%,
+    rgba(19, 37, 48, 0.67) 75%,
+    rgba(19, 37, 48, 1) 100%
+  );
+  .stad-bg {
+    background-size: cover;
+    @media (min-width: 600px) {
       background-size: cover;
-      @media (min-width: 600px) {
-        background-size: cover;
-      }
-    }
-
-    .container {
-      overflow: hidden;
-    }
-
-    h1 {
-      color: #fff;
-      flex-basis: 2%;
-    }
-
-    .subtitle-accent {
-      order: 1;
-      flex-basis: 12%;
-    }
-
-    h2 {
-      letter-spacing: 0;
-      font-size: 2rem;
-      text-transform: uppercase;
-      margin-left: 0;
-      order: 2;
-    }
-
-    .players {
-      max-height: 30vh;
-      max-width: 90vw;
-      order: 3;
-    }
-
-    .steps {
-      order: 5;
-    }
-
-    .players-button {
-      order: 5;
-    }
-
-    .cta-button {
-      bottom: -85%;
-      @media (min-width: 801px) {
-        bottom: -61%;
-      }
-    }
-
-    .app-icon {
-      display: block;
-      bottom: 0;
-      top: initial;
-      height: initial;
-      left: 50%;
-      transform: translateX(-50%);
-      @media (min-width: 600px) {
-        width: 14rem;
-      }
-    }
-
-    .benefits {
-      flex-basis: 10%;
     }
   }
 
-  // special media
-  @media (min-width: 568px) and (max-height: 567px) {
-    .players {
-      display: block;
+  .container {
+    overflow: hidden;
+  }
+
+  h1 {
+    color: #fff;
+    flex-basis: 2%;
+  }
+
+  .subtitle-accent {
+    order: 1;
+    flex-basis: 12%;
+  }
+
+  h2 {
+    letter-spacing: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .players {
+    max-height: 30vh;
+    max-width: 90vw;
+    order: 3;
+  }
+
+  .steps {
+    order: 5;
+  }
+
+  .players-button {
+    order: 5;
+  }
+
+  .cta-button {
+    bottom: -85%;
+    @media (min-width: 801px) {
+      bottom: -61%;
     }
-    .players-button {
-      flex-basis: 18%;
+  }
+
+  .app-icon {
+    display: block;
+    bottom: 0;
+    top: initial;
+    height: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (min-width: 600px) {
+      width: 14rem;
     }
-    .cta-button {
-			position: absolute;
-      bottom: -85%;
-    }
+  }
+
+  .benefits {
+    flex-basis: 10%;
+  }
+}
+
+// special media
+@media (min-width: 568px) and (max-height: 567px) {
+  .players {
+    display: block;
+  }
+  .players-button {
+    flex-basis: 18%;
+  }
+  .cta-button {
+    position: absolute;
+    bottom: -85%;
   }
 }
