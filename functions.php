@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts', 'load_scripts');
 function load_scripts()
 {
 	wp_enqueue_script('main', get_template_directory_uri() . '/dist/js/main.min.js', 'jquery', false, true);
+	wp_enqueue_script('gravitec', 'https://cdn.gravitec.net/storage/b6e7350a6ebe8ea61a02dc39c5672013/client.js', '');
 }
 
 /** Include embedded theme features */
