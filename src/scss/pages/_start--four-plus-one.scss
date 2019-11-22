@@ -1,5 +1,8 @@
 .page-template-start {
-  &.page-four-plus-one {
+  &.page-four-plus-one, 
+  &.page-four-plus-one-isport, 
+  &.page-four-plus-one-football, 
+  &.page-four-plus-one-exoclick {
     background-color: #132530;
     background-image: radial-gradient(
       ellipse at center,
@@ -79,7 +82,6 @@
     .players {
       display: block;
     }
-    
     .players-button {
       flex-basis: 18%;
     }
