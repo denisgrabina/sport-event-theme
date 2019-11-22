@@ -1,4 +1,4 @@
-body[data-slug^="four-plus-one"] {
+body[data-slug^="cash-back"] {
   background-color: #132530;
   background-image: radial-gradient(
     ellipse at center,
@@ -19,7 +19,7 @@ body[data-slug^="four-plus-one"] {
 
   h1 {
     color: #fff;
-    flex-basis: 2%;
+    flex-basis: 4%;
 		@media (min-width: 2560px) and (min-height: 1465px) {
 			display: none;
 		}
@@ -27,7 +27,7 @@ body[data-slug^="four-plus-one"] {
 
   .subtitle-accent {
     order: 1;
-    flex-basis: 12%;
+    flex-basis: 22%;
   }
 
   h2 {
@@ -36,6 +36,7 @@ body[data-slug^="four-plus-one"] {
     text-transform: uppercase;
     margin-left: 0;
     order: 2;
+    display: none;
   }
 
   .players {
@@ -46,6 +47,7 @@ body[data-slug^="four-plus-one"] {
 
   .steps {
     order: 5;
+    margin-top: 40px;
   }
 
   .players-button {
@@ -53,12 +55,15 @@ body[data-slug^="four-plus-one"] {
   }
 
   .cta-button {
-    bottom: -85%;
+    bottom: -150%;
+    @media (min-width: 600px) {
+      bottom: -107%;
+    }
     @media (min-width: 801px) {
       bottom: -61%;
     }
 		@media (min-width: 2560px) and (min-height: 1465px) {
-			bottom: -8%;
+			bottom: -18%;
 		}
   }
 
@@ -80,6 +85,7 @@ body[data-slug^="four-plus-one"] {
   .benefits {
     flex-basis: 10%;
   }
+
   // special media
   @media (min-width: 568px) and (max-height: 567px) {
     .players {

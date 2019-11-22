@@ -22,4 +22,8 @@ if (preg_match( '/\bfour-plus-one\b/i', $wp->request)) {
 	get_template_part('template-parts/promo/content', 'four-plus-one');
 }
 
+if (preg_match( '/\bcash-back\b/i', $wp->request)) {
+	get_template_part('template-parts/promo/content', 'cash-back');
+}
+
 get_footer();

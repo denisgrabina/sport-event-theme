@@ -272,6 +272,9 @@
     }
   }
   @media (min-width: 1921px) {
+		.container {
+			max-width: 1440px;
+		}
     .stad-bg {
       background-size: 100%;
       background-position: 50% 100%;
@@ -288,9 +291,6 @@
     }
   }
   @media (min-width: 1921px) and (max-height: 882px) {
-    .stad-bg {
-      background-image: none !important;
-    }
     .players {
       display: none;
     }
@@ -305,9 +305,6 @@
 // special media
 @media (min-width: 568px) and (max-height: 567px) {
   .page-template-start {
-    .stad-bg {
-      background-image: none !important;
-    }
     h1 {
       flex-basis: 21%;
       font-size: 5rem;
@@ -356,9 +353,6 @@
 
 @media (max-height: 320px) {
   .page-template-start {
-    .stad-bg {
-      background-image: none !important;
-    }
     h1 {
       flex-basis: 21%;
     }
@@ -369,6 +363,37 @@
       flex-direction: row;
       justify-content: space-evenly;
       margin: 0;
+    }
+  }
+}
+
+// media for hide stad-bg on home page mobile landscape mode
+@media (min-width: 1921px) and (max-height: 882px) {
+  .page-template-start {
+    &.home {
+      .stad-bg {
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 568px) and (max-height: 567px) {
+  .page-template-start {
+    &.home {
+      .stad-bg {
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+@media (max-height: 320px) {
+  .page-template-start {
+    &.home {
+      .stad-bg {
+        background-image: none !important;
+      }
     }
   }
 }
