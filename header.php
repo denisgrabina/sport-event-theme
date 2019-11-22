@@ -34,7 +34,7 @@
 
 </head>
 
-<body <?php body_class($class); ?>>
+<body <?php body_class($class); ?> data-slug="<?php echo $wp->request ?>">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKDJP9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->

@@ -14,17 +14,11 @@
  */
 
 get_header();
-
 if (is_front_page() || is_page('start-bazabet')) {
 	get_template_part('template-parts/content', 'start');
 }
 
-if (
-	is_page('four-plus-one') ||
-	is_page('four-plus-one-isport') ||
-	is_page('four-plus-one-football') ||
-	is_page('four-plus-one-exoclick')
-) {
+if (preg_match( '/\bfour-plus-one\b/i', $wp->request)) {
 	get_template_part('template-parts/promo/content', 'four-plus-one');
 }
 
