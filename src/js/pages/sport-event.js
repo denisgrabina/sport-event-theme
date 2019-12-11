@@ -39,17 +39,43 @@ if (body.classList.contains("page-template-event")) {
   }
 }
 
-if (body.classList.contains("page-template-start")) {
+if (body.classList.contains("page-template")) {
   document.addEventListener(
     "DOMContentLoaded",
     () => (body.style.display = "block")
   );
+
+  function viewPort() {
+    window.addEventListener("resize", applyViewPort);
+    window.addEventListener("orientationchange", () => {
+      applyViewPort();
+    });
+
+    applyViewPort();
+  }
+
+	function applyViewPort() {
+		const doc = document.documentElement;
+		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+	}
+
+	function orientationChanged() {
+		const timeout = 120;
+		return new Promise((resolve) => {
+			const go = (i, height0) => {
+				window.innerHeight !== height0 || i >= timeout 
+				? resolve()
+				: window.requestAnimationFrame(() => go(i + 1, height0));
+			}
+		});
+	}
 }
 
 const addConvScript = e => {
   const script = document.createElement("script");
   script.type = "text/javascript";
-  script.src = "https://juntives-unding.icu/conversion.js?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL";
+  script.src =
+    "https://juntives-unding.icu/conversion.js?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL";
   document.getElementsByTagName("head")[0].appendChild(script);
   return false;
 };

@@ -3,10 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title><?php bloginfo( $name ); ?></title>
+	<title><?php bloginfo($name); ?></title>
 	<meta name="description" content="Temlate Landing Page Generator for Sport Events Bazabet" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 	<link rel="manifest" href="<?php echo get_template_directory_uri() . '/site.webmanifest' ?>" />
 	<!-- <link rel="apple-touch-icon" href="../img/defaults/icon.png" /> -->
 
