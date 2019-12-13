@@ -24,7 +24,7 @@
 		</div>
 		<div class="description"><?php the_field('description') ?></div>
 		<div class="bet-button">
-			<a href="<?php the_field('bet-link'); ?>" class="cta-link cta-link__bet"><?php the_field('bet-text'); ?>
+			<a href="<?php the_field('bet-link'); ?>" class="bet-link"><?php the_field('bet-text'); ?>
 			</a>
 		</div>
 	</div>
@@ -35,27 +35,29 @@
 		<img src="<?php the_field('player-bg') ?>);" alt="<?php the_field('player-alt') ?>" class="img-responsive">
 	</div>
 
-	<footer>
-		<div class="pay-system">
-			<?php while (have_rows('pay-system')) : the_row(); ?>
-				<a href="<?php the_sub_field('pay-system-link'); ?>" class="pay-system-link"><img src="<?php the_sub_field('pay-system-icon'); ?>" alt="<?php the_sub_field('pay-system-icon-alt'); ?>" class="pay-system-icon"></a>
-			<?php
-			endwhile;
-			?>
+	<div class="footer">
+		<div class="footer-container">
+			<div class="pay-system">
+				<?php while (have_rows('pay-system')) : the_row(); ?>
+					<a href="<?php the_sub_field('pay-system-link'); ?>" class="pay-system-link"><img src="<?php the_sub_field('pay-system-icon'); ?>" alt="<?php the_sub_field('pay-system-icon-alt'); ?>" class="pay-system-icon"></a>
+				<?php
+				endwhile;
+				?>
+			</div>
+			<div class="app">
+				<?php while (have_rows('app')) : the_row(); ?>
+					<a href="<?php the_sub_field('app-link'); ?>" class="app-link"><img src="<?php the_sub_field('app-icon'); ?>" alt="<?php the_sub_field('app-icon-alt'); ?>" class="app-icon img-responsive"></a>
+				<?php
+				endwhile;
+				?>
+			</div>
+			<div class="social">
+				<?php while (have_rows('social')) : the_row(); ?>
+					<a href="<?php the_sub_field('social-link'); ?>" class="social-link"><img src="<?php the_sub_field('social-icon'); ?>" alt="<?php the_sub_field('social-icon-alt'); ?>" class="social-icon"></a>
+				<?php
+				endwhile;
+				?>
+			</div>
 		</div>
-		<div class="app">
-			<?php while (have_rows('app')) : the_row(); ?>
-				<a href="<?php the_sub_field('app-link'); ?>" class="app-link"><img src="<?php the_sub_field('app-icon'); ?>" alt="<?php the_sub_field('app-icon-alt'); ?>" class="app-icon"></a>
-			<?php
-			endwhile;
-			?>
-		</div>
-		<div class="social">
-			<?php while (have_rows('social')) : the_row(); ?>
-				<a href="<?php the_sub_field('social-link'); ?>" class="social-link"><img src="<?php the_sub_field('social-icon'); ?>" alt="<?php the_sub_field('social-icon-alt'); ?>" class="social-icon"></a>
-			<?php
-			endwhile;
-			?>
-		</div>
-	</footer>
+	</div>
 </main>

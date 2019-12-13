@@ -1,6 +1,8 @@
 const body = document.querySelector("body");
 const ctaLink = document.querySelector(".cta-link");
 
+// Events template
+
 if (body.classList.contains("page-template-event")) {
   document.addEventListener(
     "DOMContentLoaded",
@@ -39,14 +41,25 @@ if (body.classList.contains("page-template-event")) {
   }
 }
 
+// Champions
+
 if (body.classList.contains("page-template")) {
   document.addEventListener(
     "DOMContentLoaded",
     () => (body.style.display = "block")
   );
 
+	if (window.innerWidth > "1024") {
+		
+	}
+	document.addEventListener(
+    "DOMContentLoaded",
+    () => viewPort()
+  );
+
   function viewPort() {
     window.addEventListener("resize", applyViewPort);
+		
     window.addEventListener("orientationchange", () => {
       applyViewPort();
     });
@@ -58,18 +71,9 @@ if (body.classList.contains("page-template")) {
 		const doc = document.documentElement;
 		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 	}
-
-	function orientationChanged() {
-		const timeout = 120;
-		return new Promise((resolve) => {
-			const go = (i, height0) => {
-				window.innerHeight !== height0 || i >= timeout 
-				? resolve()
-				: window.requestAnimationFrame(() => go(i + 1, height0));
-			}
-		});
-	}
 }
+
+// Gravitec
 
 const addConvScript = e => {
   const script = document.createElement("script");

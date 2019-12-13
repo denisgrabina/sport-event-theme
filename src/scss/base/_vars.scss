@@ -5,6 +5,19 @@ $formularLight: "Formular-Light", sans-serif;
 $greenColor: #00b140;
 $whiteColor: #fff;
 $greenRGBA: rgba(0, 177, 64, 1);
-$greenRGBA5: rgba(0, 177, 64, .7);
-$greenRGBA2: rgba(0, 177, 64, .5);
-$graphiteColor: #25303B;
+$greenRGBA5: rgba(0, 177, 64, 0.7);
+$greenRGBA2: rgba(0, 177, 64, 0.5);
+$graphiteColor: #25303b;
+$blueColor: #00a8e4;
+
+$gradientDarkBlueGraphite: radial-gradient(
+  ellipse at center,
+  rgba(25, 129, 137, 1) 0%,
+  rgba(20, 30, 38, 0.67) 75%,
+  rgba(20, 30, 38, 1) 100%
+);
+$gradientPurpleBlueColor: linear-gradient(
+  90deg,
+  #685BC7 0%,
+  #00A3E0 100%
+);

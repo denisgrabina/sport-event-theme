@@ -11,7 +11,7 @@
   50% {
     opacity: 1;
   }
-	63% {
+  63% {
     opacity: 0.9;
   }
   75% {
@@ -24,14 +24,14 @@
 
 @keyframes scale-cta {
   0% {
-		transform: scale(1);
+    transform: scale(1);
   }
   25% {
     transform: scale(1.09);
   }
   50% {
     transform: scale(1);
-	}
+  }
   75% {
     transform: scale(1.09);
   }
@@ -42,14 +42,14 @@
 
 @keyframes scale-title {
   0% {
-		transform: scale(1);
+    transform: scale(1);
   }
   25% {
     transform: scale(1.05);
   }
   50% {
     transform: scale(1);
-	}
+  }
   75% {
     transform: scale(1.05);
   }
@@ -60,18 +60,27 @@
 
 @keyframes translate-h3 {
   0% {
-		transform: translate(1);
+    transform: translate(1);
   }
   25% {
     transform: translate3d(10px, 10px 10px);
   }
   50% {
     transform: translate(1);
-	}
+  }
   75% {
     transform: translate3d(10px, 10px 10px);
   }
   100% {
     transform: translate(1);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
