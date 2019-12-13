@@ -2,12 +2,7 @@
   display: none;
   user-select: none;
   background-color: #414b57;
-  background-image: radial-gradient(
-    ellipse at center,
-    rgba(25, 129, 137, 1) 0%,
-    rgba(20, 30, 38, 0.67) 75%,
-    rgba(20, 30, 38, 1) 100%
-  );
+  background-image: $gradientDarkBlueGraphite;
   background-size: contain;
 
   .main {

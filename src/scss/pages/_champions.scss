@@ -4,23 +4,31 @@
   background-color: #151d23;
   background-size: contain;
   text-align: left;
-  touch-action: none;
-
   .stad-bg {
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 100%;
     background-position: 50% 100%;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--app-height);
   }
 
+	.stad-bg-accessible {
+		overflow: visible;
+		touch-action: initial;
+	}
+
   .container {
-    max-width: 21.875rem;
+    max-width: 90%;
+    padding: 0 15px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
+    position: relative;
+    z-index: 1;
   }
 
   h1 {
@@ -44,12 +52,10 @@
     flex-direction: column;
     text-align: center;
     order: 2;
-    // animation: heading-blink 1.5s infinite linear;
   }
 
   .cta-button {
     margin: 2.75rem auto 0;
-    animation: scale-cta 4s infinite linear;
     order: 3;
     .cta-link {
       font-family: $formularMedium;
@@ -57,13 +63,15 @@
       color: white;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 0.9375rem 2.5rem;
+      padding: 1.25rem 2.5rem;
       background-color: $greenColor;
       cursor: pointer;
-      box-shadow: 0.5rem 0.5rem 0 rgba(0, 31, 11, 0.3);
+      box-shadow: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.37);
       transition: 0.5s;
       position: relative;
       letter-spacing: 0.125rem;
+      height: 100%;
+      display: block;
       &:hover {
         background-color: #009d39;
         box-shadow: none;
@@ -79,30 +87,77 @@
   }
 
   .prize {
+    margin: 2.5rem auto 0;
     order: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+    width: fit-content;
+    &-sum {
+      position: relative;
+      font-size: 4rem;
+      font-weight: 600;
+      color: $whiteColor;
+      z-index: 2;
+      animation: scale-cta 3s infinite linear;
+      display: flex;
+      justify-content: center;
+
+      span {
+        position: absolute;
+        top: 3%;
+        left: 1%;
+        width: max-content;
+        display: block;
+        color: #00a8e4;
+        -webkit-text-stroke: 1px #00a8e4;
+        -webkit-text-fill-color: transparent;
+        z-index: -1;
+      }
+
+      i {
+        position: absolute;
+        bottom: -10%;
+        right: -4%;
+        width: max-content;
+        font-size: 2.25rem;
+        color: $blueColor;
+      }
+    }
+    &-desc {
+      margin-top: 1rem;
+      font-size: 1.375rem;
+    }
   }
 
   .description {
+    margin-top: 2.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
     order: 5;
   }
 
   .bet-button {
-    margin: 2.75rem auto 0;
-    //animation: scale-cta 4s infinite linear;
+    margin: 3.75rem auto 2rem;
+    box-shadow: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.37);
+    overflow: hidden;
     order: 6;
     .bet-link {
       font-family: $formularMedium;
       font-size: 1.75rem;
       color: white;
       text-decoration: none;
-      text-transform: uppercase;
-      padding: 0.9375rem 2.5rem;
-      background-color: $greenColor;
+      padding: 1.25rem 2.5rem;
+      background: $gradientPurpleBlueColor;
       cursor: pointer;
-      box-shadow: 0.5rem 0.5rem 0 rgba(0, 31, 11, 0.3);
+      box-shadow: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.37);
       transition: 0.5s;
       position: relative;
       letter-spacing: 0.125rem;
+      height: 100%;
+      display: block;
       &:hover {
         background-color: #009d39;
         box-shadow: none;
@@ -114,30 +169,24 @@
         outline: none;
         border: none;
       }
-    }
-  }
-
-  .steps {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    order: 6;
-    text-align: left;
-    .step {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-      &-number {
-        font-family: $bazabetFont;
-        font-size: 3rem;
-        color: $greenColor;
-      }
-      &-text {
-        font-family: $formularBold;
-        border-bottom: 1px solid $greenColor;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        margin-left: 1rem;
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        transform: translateX(100%) rotate(45deg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(125, 185, 232, 0) 60%,
+          rgba(255, 255, 255, 0.3) 80%,
+          rgba(125, 185, 232, 0) 90%,
+          rgba(125, 185, 232, 0) 100%
+        );
+        z-index: 2;
+        animation: ease-out 2.5s infinite shine;
       }
     }
   }
@@ -146,238 +195,80 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-		img {
-			margin: 0 auto;
-		}
+    z-index: 0;
+    img {
+      margin: 0 auto;
+    }
   }
 
   .player-bg {
     position: absolute;
-    bottom: -3%;
+    bottom: 0%;
+    width: 100%;
+    z-index: 0;
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    position: relative;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  .footer-container {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .pay-system {
-    display: none;
+    display: flex;
+    order: 2;
+    a {
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        img {
+          width: 3rem;
+        }
+      }
+    }
+    img {
+      width: 2rem;
+    }
   }
 
   .app {
-    display: none;
+    display: flex;
+    order: 1;
+    a {
+      margin-right: 1rem;
+    }
+    img {
+      width: 6.75rem;
+    }
   }
 
   .social {
-    display: none;
-  }
-
-  @media (min-width: 600px) {
-    .stad-bg {
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: 50% 50%;
-    }
-    .app {
-      &-icon {
-        top: 7%;
-        left: 0.9%;
-        transform: rotate(-90deg);
-        transition: all 0.4s;
-        opacity: 0.8;
-        width: 8rem;
-        height: 6rem;
-        &:hover {
-          opacity: 1;
-          transform: rotate(0deg);
-        }
-      }
-    }
-  }
-  @media (min-width: 801px) {
-    .benefits {
-      display: flex;
-      justify-content: space-around;
-      margin: 0.625rem auto 0;
-      order: 0;
-      flex-basis: 12%;
-      .benefit {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &-icon {
-          width: 3rem;
-          height: 3rem;
-          margin-right: 3%;
-          transition: all 0.7s;
-          &:hover {
-            transform: translateY(-2px);
-          }
-          &:hover ~ .benefit-text {
-            opacity: 1;
-          }
-        }
-        &-text {
-          text-transform: uppercase;
-          max-width: 242px;
-          font-size: 0.8125rem;
-          transition: opacity 0.5s;
-          opacity: 0;
-          margin-top: 0.3125rem;
-        }
-      }
-    }
-    .steps {
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin: 0 0 1rem;
-    }
-    h1 {
-      flex-basis: 15%;
-      margin-top: 0;
-    }
-    .subtitle-accent {
-      flex-basis: 15%;
-    }
-  }
-  @media (min-width: 1025px) {
-    h1 {
-      flex-basis: 10%;
-    }
-    .benefits {
-      flex-basis: 24%;
-    }
-  }
-  @media (min-width: 1281px) {
-    h1 {
-      flex-basis: 3%;
-    }
-    .subtitle-accent {
-      flex-basis: 40%;
-    }
-    .cta-button {
-      flex-basis: 20%;
-    }
-  }
-  @media (min-width: 1921px) {
-    .container {
-      max-width: 1440px;
-    }
-    .stad-bg {
-      background-size: 100%;
-      background-position: 50% 100%;
-    }
-    h1 {
-      flex-basis: 3%;
-    }
-    .subtitle-accent {
-      flex-basis: 40%;
-    }
-    .cta-button {
-      bottom: 18%;
-      flex-basis: 20%;
-    }
-  }
-  @media (min-width: 1921px) and (max-height: 882px) {
-    .players {
-      display: none;
-    }
-  }
-  @media (min-width: 2560px) and (min-height: 1151px) {
-    .container {
-      justify-content: space-evenly;
-    }
-  }
-}
-
-// special media
-@media (min-width: 568px) and (max-height: 567px) {
-  .page-template-start {
-    h1 {
-      flex-basis: 21%;
-      font-size: 5rem;
-    }
-    h2 {
-      font-size: 4rem;
-    }
-    .subtitle-accent {
-      flex-basis: 20%;
-      font-size: 4rem;
-    }
-    .players {
-      display: none;
-    }
-    .cta-button {
-      transform: translateY(-26px);
-      position: static;
-    }
-    .steps {
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin: 0;
-    }
-    .players-button {
-      flex-basis: 18%;
-    }
-    .app-icon {
-      top: 11%;
-    }
-    .social {
-      top: 7%;
-    }
-  }
-}
-
-@media (min-width: 801px) and (min-height: 321px) and (max-width: 1024px) and (max-height: 567px) {
-  .page-template-start {
-    .app-icon {
-      top: 40%;
-    }
-    .social {
-      top: 20%;
-    }
-  }
-}
-
-@media (max-height: 320px) {
-  .page-template-start {
-    h1 {
-      flex-basis: 21%;
-    }
-    .subtitle-accent {
-      flex-basis: 30%;
-    }
-    .steps {
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin: 0;
-    }
-  }
-}
-
-// media for hide stad-bg on home page mobile landscape mode
-@media (min-width: 1921px) and (max-height: 882px) {
-  .page-template-start {
-    &.home {
-      .stad-bg {
-        background-image: none !important;
-      }
+    display: flex;
+    order: 3;
+    a {
+      margin-left: 1rem;
     }
   }
 }
 
 @media (min-width: 568px) and (max-height: 567px) {
-  .page-template-start {
-    &.home {
-      .stad-bg {
-        background-image: none !important;
-      }
-    }
-  }
-}
-
-@media (max-height: 320px) {
-  .page-template-start {
-    &.home {
-      .stad-bg {
-        background-image: none !important;
+  .page-template-champions {
+    .player-bg {
+      img {
+        width: 50%;
       }
     }
   }
