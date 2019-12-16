@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: var(--app-height);
+		overflow-x: hidden;
   }
 
   .stad-bg-accessible {
