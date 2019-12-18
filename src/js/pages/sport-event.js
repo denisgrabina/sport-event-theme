@@ -49,12 +49,6 @@ if (body.classList.contains("page-template")) {
     () => (body.style.display = "block")
   );
 
-	const stadBg = document.querySelector('.stad-bg');
-
-	if (window.innerWidth > "800" && window.innerHeight < "800") {
-		stadBg.setProperty("--veiwport-height", `${window.innerHeight}`);
-	}
-
 	document.addEventListener(
     "DOMContentLoaded",
     () => viewPort()
