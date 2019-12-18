@@ -49,9 +49,6 @@ if (body.classList.contains("page-template")) {
     () => (body.style.display = "block")
   );
 
-	if (window.innerWidth > "1024") {
-		
-	}
 	document.addEventListener(
     "DOMContentLoaded",
     () => viewPort()
@@ -71,7 +68,10 @@ if (body.classList.contains("page-template")) {
 		const doc = document.documentElement;
 		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 	}
+
 }
+
+
 
 // Gravitec
 
