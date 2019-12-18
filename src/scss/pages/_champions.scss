@@ -5,6 +5,7 @@
   background-size: contain;
   text-align: left;
   .stad-bg {
+		--veiwport-height: 779px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 42% 50%;
@@ -22,6 +23,7 @@
   }
 
   .container {
+		
     padding: 0 15px;
     margin: 0 auto;
     display: flex;
@@ -438,16 +440,8 @@
 // height-fix
 @media (max-height: 799px) and (min-width: 800px) {
   .page-template-champions {
-    .stad-bg {
-      min-height: calc(100% + 100%);
-    }
-  }
-}
-
-@media (max-height: 799px) and (min-width: 1440px) {
-  .page-template-champions {
-    .stad-bg {
-      min-height: calc(100% + 200%);
-    }
+		.stad-bg {
+			min-height: calc(var(--veiwport-height) + 10%);
+		}
   }
 }

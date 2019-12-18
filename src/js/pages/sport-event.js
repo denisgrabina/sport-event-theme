@@ -49,9 +49,12 @@ if (body.classList.contains("page-template")) {
     () => (body.style.display = "block")
   );
 
-	if (window.innerWidth > "1024") {
-		
+	const stadBg = document.querySelector('.stad-bg');
+
+	if (window.innerWidth > "800" && window.innerHeight < "800") {
+		stadBg.setProperty("--veiwport-height", `${window.innerHeight}`);
 	}
+
 	document.addEventListener(
     "DOMContentLoaded",
     () => viewPort()
@@ -71,7 +74,10 @@ if (body.classList.contains("page-template")) {
 		const doc = document.documentElement;
 		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 	}
+
 }
+
+
 
 // Gravitec
 
